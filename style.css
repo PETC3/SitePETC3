@@ -1,9 +1,30 @@
-*{
-    margin: 0;
+* {
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-h1{
-    color: tomato;
+header{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-imagem img{
+    padding: 10% 10%;
+    width: 30%;
+    height: 30%;
+}
+.menu li{
+    display: inline-block;
+    margin: 0px 20px;
+}
+
+.menu li a{
+    font-family: Arial, Helvetica, Open Sans;
+    font-weight: bold;
+    font-size: 17px;
+    text-decoration: none;
+    color: black;
 }
