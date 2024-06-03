@@ -12,9 +12,9 @@ header{
     align-items: center;
 }
 .logo-imagem img{
-    padding: 10% 10%;
-    width: 30%;
-    height: 30%;
+    padding: 5% 10%;
+    width: 45%;
+    height: 45%;
 }
 .menu li{
     display: inline-block;
