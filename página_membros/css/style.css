@@ -63,7 +63,7 @@ nav a {
     transition: .5s;
 }
 nav a:hover {   
-    text-decoration: underline;
+    color: #397dd4;
 }
 
 main{
@@ -90,7 +90,7 @@ main h1 {
     height: auto;
     transition: transform 0.3s ease, z-index 0.3s ease;
     z-index: 1;
-    overflow: hidden;
+
 
 }
 .efeito {
@@ -121,12 +121,44 @@ main h1 {
     background-color: rgba(17, 60, 116, 0.7); /* fundo translúcido da animação */
     color: #f2f2f2;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content:space-between; 
+    align-items: flex-start;
+    text-align: center;
+    padding-top: 15px;
     opacity: 0;
     transition: 0.3s ease;
     z-index: 2;
 }
+.text-container h3 { /* texto do nome das pessoas*/
+    font-size: 20px;
+    margin-bottom: 20px; /*espaçamento embaixo da primeira linha */
+}
+
+.text-container p { /* resto do texto*/
+    font-size: 13px; 
+    line-height: 1.3;
+    text-align: left;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+.text-container .icon-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+.text-container .icon-links a {
+    margin-right: 10px;
+    color: #f2f2f2;
+    font-size: 24px;
+}
+.text-container .icon-links a:hover {
+    color: #397dd4; /* Cor desejada ao passar o mouse */
+    transition: color 0.3s ease; /* Animação suave de 0.3 segundos */
+}
+
+
 .image-container:hover .overlay {
     opacity: 1;
     transform: scale(1.3); /* aumenta o tamanho do fundo também */
