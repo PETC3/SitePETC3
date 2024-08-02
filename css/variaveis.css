@@ -1,0 +1,11 @@
+:root{
+    --cor-projeto: #16498C;
+    --cor-fundo: #f2f2f2;
+    --cor-menu-mobile: #e8e8e8;
+}
+.petcode:root {
+    --cor-projeto: #671A99;
+}
+.alongapet:root {
+    --cor-projeto: #FFD600;
+}

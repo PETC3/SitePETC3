@@ -1,34 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Membros - PET C3</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="efeitos.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/membros.css">
+    <script src="../js/membros.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <header id="header">
-        <a href="../home.html">
-            <img src="imagens/logo_petbranca.png" alt="Logo PET C3" class="logo">
-        </a>
-        <nav class="pc-menu">
-            <a href="../home.html">Início</a>
-            <a href="membros.html">Membros</a>
+        <a href="index.html"><img src="../imagens/main/logo_pet_branca.png" alt="Logo PET C3" class="logo"></a>
+        <nav class="menu">
+            <ul id="nav_header">
+                <button class="iconx" onclick="toggleSidebar()"><i class="fa-solid fa-xmark iconxi"></i></button>
+                <li><a href="../paginas/index.html" class="nav_link">Home</a></li>
+                <li><a href="membros.html" class="nav_link">Membros</a></li>
+                <li><a href="" class="nav_link">Sobre</a></li>
+            </ul>
         </nav>
-        <nav class="mobile-menu">
-            <a href="../home.html"><i class="fa-solid fa-house"></i></a>
-            <a href="membros.html"><i class="fa-solid fa-people-group"></i></a>
-        </nav>
+        <button class="icon" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
     </header>
     <main>
         <h1>Membros</h1>
         <div class="grid-container">
 
             <div class="image-container efeito">
-                <img src="imagens/membro1.png" alt="Foto do Membro 1">
+                <img src="../imagens/membros/membro1.png" alt="Foto do Membro 1">
                 <div class="overlay">
                     <div class="text-container">
                         <h3>Yan Veiga</h3>
@@ -42,32 +42,7 @@
                 </div> <!--overlay-->
             </div> <!--image-container efeito-->
             <div class="image-container efeito">
-                <img src="imagens/membro1.png" alt="Foto do Membro 1">
-                <div class="overlay">
-                    <div class="text-container">
-                        <h3>Yan Veiga</h3>
-                        <p>Projetos: AlongaPET, PETCode, RH Gestão<br><br>Cursando Engenharia de Computação<br><br>Natural de Rio Grande - RS<br><br>Membro desde 2021</p>
-                        <div class="icon-links">
-                            <a href="https://instagram.com/yanveigav" target="_blank"><i class="fab fa-instagram"></i></a>
-                        </div> <!--icon-links-->
-                    </div> <!--text-container-->
-                </div> <!--overlay-->
-            </div> <!--image-container efeito-->
-            <div class="image-container efeito">
-                <img src="imagens/membro1.png" alt="Foto do Membro 1">
-                <div class="overlay">
-                    <div class="text-container">
-                        <h3>Yan Veiga</h3>
-                        <p>Projetos: AlongaPET, PETCode, RH Gestão<br><br>Cursando Engenharia de Computação<br><br>Natural de Rio Grande - RS<br><br>Membro desde 2021</p>
-                        <div class="icon-links">
-                            <a href="https://instagram.com/yanveigav" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a href="https://github.com/yanveiga" target="_blank"><i class="fab fa-github"></i></a>
-                        </div> <!--icon-links-->
-                    </div> <!--text-container-->
-                </div> <!--overlay-->
-            </div> <!--image-container efeito-->
-            <div class="image-container efeito">
-                <img src="imagens/membro1.png" alt="Foto do Membro 1">
+                <img src="../imagens/membros/membro1.png" alt="Foto do Membro 1">
                 <div class="overlay">
                     <div class="text-container">
                         <h3>Yan Veiga</h3>
@@ -81,7 +56,7 @@
                 </div> <!--overlay-->
             </div> <!--image-container efeito-->
             <div class="image-container efeito">
-                <img src="imagens/membro1.png" alt="Foto do Membro 1">
+                <img src="../imagens/membros/membro1.png" alt="Foto do Membro 1">
                 <div class="overlay">
                     <div class="text-container">
                         <h3>Yan Veiga</h3>
@@ -95,7 +70,7 @@
                 </div> <!--overlay-->
             </div> <!--image-container efeito-->
             <div class="image-container efeito">
-                <img src="imagens/membro1.png" alt="Foto do Membro 1">
+                <img src="../imagens/membros/membro1.png" alt="Foto do Membro 1">
                 <div class="overlay">
                     <div class="text-container">
                         <h3>Yan Veiga</h3>
@@ -109,7 +84,7 @@
                 </div> <!--overlay-->
             </div> <!--image-container efeito-->
             <div class="image-container efeito">
-                <img src="imagens/membro1.png" alt="Foto do Membro 1">
+                <img src="../imagens/membros/membro1.png" alt="Foto do Membro 1">
                 <div class="overlay">
                     <div class="text-container">
                         <h3>Yan Veiga</h3>
@@ -123,7 +98,7 @@
                 </div> <!--overlay-->
             </div> <!--image-container efeito-->
             <div class="image-container efeito">
-                <img src="imagens/membro1.png" alt="Foto do Membro 1">
+                <img src="../imagens/membros/membro1.png" alt="Foto do Membro 1">
                 <div class="overlay">
                     <div class="text-container">
                         <h3>Yan Veiga</h3>
@@ -137,7 +112,7 @@
                 </div> <!--overlay-->
             </div> <!--image-container efeito-->
             <div class="image-container efeito">
-                <img src="imagens/membro1.png" alt="Foto do Membro 1">
+                <img src="../imagens/membros/membro1.png" alt="Foto do Membro 1">
                 <div class="overlay">
                     <div class="text-container">
                         <h3>Yan Veiga</h3>
@@ -151,7 +126,7 @@
                 </div> <!--overlay-->
             </div> <!--image-container efeito-->
             <div class="image-container efeito">
-                <img src="imagens/membro1.png" alt="Foto do Membro 1">
+                <img src="../imagens/membros/membro1.png" alt="Foto do Membro 1">
                 <div class="overlay">
                     <div class="text-container">
                         <h3>Yan Veiga</h3>
@@ -164,6 +139,7 @@
                     </div> <!--text-container-->
                 </div> <!--overlay-->
             </div> <!--image-container efeito-->
+            
 
         </div> <!--grid-container-->
     </main>

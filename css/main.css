@@ -1,0 +1,145 @@
+@import url('variaveis.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo);
+}
+
+
+
+/*********  Começo do header  *********/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--cor-fundo);
+    width: 100%;
+    position: fixed;
+    transition: .5s;
+    box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+header.rolagem {
+    padding: 15px 40px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.icon, .iconx {
+    font-size: 21px;
+    cursor: pointer;
+    border: none;
+}
+.icon:hover, .iconx:hover {
+    color: var(--cor-projeto);
+}
+.iconx {
+    position: absolute;
+    background-color: var(--cor-menu-mobile);
+    right: 40px;
+    top: 28px;
+}
+.iconxi {
+    background-color: var(--cor-menu-mobile);
+}
+.menu {
+    width: 100%;
+}
+.menu ul{
+    list-style-type: none;
+    position: absolute;
+    margin-right: -200vh;
+    padding: 110px 30px;
+    height: 100vh;
+    background-color: var(--cor-menu-mobile);
+    top: 0;
+    right: 0;
+    border: 1px solid rgba(0, 0, 0, 0.352);
+    animation-duration: .2s;
+}
+.menu li {
+    padding: 10px 0;
+    background-color: var(--cor-menu-mobile);
+}
+.menu a {
+    color: black;
+    text-decoration: none;
+    background-color: var(--cor-menu-mobile);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.menu a:hover{
+    color: var(--cor-projeto);
+    transition: color 0.3s ease;
+}
+
+@keyframes showSidebar {
+    from {margin-right: -200vh;}
+    top {margin-right: 0px;}
+}
+/*********  fim do header  *********/
+
+
+
+main{
+    display: flex;
+}
+main h1{
+    color: var(--cor-projeto);
+}
+.lado1, .lado2{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main img{
+    width: 300px;
+}
+.bola{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: var(--cor-projeto);
+}
+
+@media screen and (min-width: 700px) {
+
+
+/*********  Começo do header  *********/
+    header button {
+        display: none;
+    }
+    .menu ul {
+        position: relative;
+        display: flex;
+        justify-content: end;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--cor-fundo);
+        border: none;
+    }
+    .menu li {
+        padding: 0 20px;
+        background-color: var(--cor-fundo);
+    }
+    .menu a {
+        background-color: var(--cor-fundo);
+    }
+/*********  fim do header  *********/
+
+
+
+}

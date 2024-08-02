@@ -1,3 +1,5 @@
+@import url('variaveis.css');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +8,59 @@
 }
 
 body {
-    background-color: #16498c;
-    color: #f2f2f2;
+    background-color: var(--cor-projeto);
+    color: var(--cor-fundo);
 }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--cor-projeto);
+    width: 100%;
+    position: fixed;
+    transition: .5s;
+    box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.1);
+    z-index: 11;
+}
+
+header.rolagem {
+    padding: 15px 40px;
+}
+
+.logo {
+    height: 50px;
+}
+
+header button {
+    display: none;
+}
+
+.menu {
+    width: 100%;
+}
+.menu ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: end;
+    margin-right: 0;
+    max-width: 100%;
+}
+.menu li {
+    padding: 0 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--cor-fundo);
+    width: 100%;
+}
+.menu a:hover {
+    color: #397dd4;
+    transition: color 0.3s ease;
+}
+
+
 
 /* Imagem de fundo */
 body::before {
@@ -18,50 +70,13 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../imagens/imagem_fundo.png') no-repeat center center; /* url da imagem */
+    background: url('../imagens/membros/imagem_fundo.png') no-repeat center center; /* url da imagem */
     background-size: cover; /* faz a imagem cobrir toda página, amplia ela */
     opacity: 1; /* deixa um pouco transparente */
     pointer-events: none;
     z-index: -1;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 8%;
-    background-color: #16498c;
-    width: 100%;
-    position: fixed;
-    z-index: 11;
-    transition: .5s;
-    box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.1); /* sombra do cabeçalho */
-}
-header.rolagem{
-    padding: 0px 8%;
-    box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.5); /* sombra do cabeçalho */
-}
-.logo {
-    height: 80px;
-    flex-shrink: 0;
-    transition: .5s;
-}
-nav {
-    display: flex; /* Início e Membros estarem em linha, padronização */
-}
-nav a {
-    color: #f2f2f2;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 21px;
-    transition: .5s;
-}
-.mobile-menu{
-    display: none;
-}
-nav a:hover {   
-    color: #397dd4;
-}
 
 main{
     padding-top: 100px; /* padding é espaço entre os elementos e as bordas, uma margem */
@@ -166,32 +181,56 @@ main h1 {
 }
 
 
-::-webkit-scrollbar{
-    width: 12px;
-}
-::-webkit-scrollbar-track{
-    background-color: #ffffff;
-    border-radius: 20px;
-}
-::-webkit-scrollbar-thumb{
-    background-color: #16498c;
-    border: solid;
-    border-radius: 10px;
-}
-::-webkit-scrollbar-button{
-    background-color: #16498c;
-}
-
 @media screen and (max-width: 811px) {
-    nav a {
-        font-size: 30px;
+    .icon, .iconx {
+        font-size: 21px;
+        cursor: pointer;
+        border: none;
+        color: var(--cor-fundo);
+        background-color: var(--cor-projeto);
     }
-    .pc-menu {
-        display: none;
+    .icon:hover, .iconx:hover {
+        color: #397dd4;
     }
-    .mobile-menu{
+    .iconx {
+        position: absolute;
+        background-color: #103769;
+        right: 40px;
+        top: 28px;
+    }
+    .iconxi {
+        background-color: #103769;
+    }
+    header button {
         display: block;
     }
+    .menu ul {
+        position: absolute;
+        top: 0;
+        right: 0;
+        justify-content: end;
+        display: block;
+        margin-right: -200vh;
+        padding: 110px 30px;
+        height: 100vh;
+        background-color: #103769;
+        border: 1px solid rgba(0, 0, 0, 0.352);
+        animation-duration: .2s;
+    }
+    .menu li {
+        padding: 10px 0;
+        background-color: #103769;
+    }
+    .menu a {
+        background-color: #103769;
+        display: flex;
+        justify-content: center;
+    }
+    @keyframes showSidebar {
+        from {margin-right: -200vh;}
+        top {margin-right: 0px;}
+    }
+
     .grid-container {
         padding-left: 7%;
         padding-right: 7%;
