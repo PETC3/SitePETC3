@@ -7,8 +7,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
+html {
+    scroll-behavior: smooth;
     background-color: var(--cor-fundo);
+    color: var(--cor-fonte);
 }
 
 
@@ -22,6 +24,7 @@ header {
     background-color: var(--cor-fundo);
     width: 100%;
     position: fixed;
+    z-index: 11;
     transition: .5s;
     box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.1);
 }
@@ -30,7 +33,22 @@ header.rolagem {
     padding: 15px 40px;
 }
 
-.logo {
+header.cor, header.cor .icon {
+    background-color: var(--cor-projeto);
+    color: var(--cor-fonte-contraste);
+}
+
+header.cor .menu ul, header.cor .menu li, header.cor .menu a, header.cor .menu .iconx, header.cor .menu .iconxi {
+    background-color: var(--cor-menu-mobile2);
+    color: var(--cor-fonte-contraste);
+    transition: .5s;
+}
+
+header.cor .menu a:hover, header.cor .menu .iconx:hover, header.cor .menu .iconxi:hover, header.cor .icon:hover {
+    color: var(--cor-fonte-hover);
+}
+
+.logo-header {
     height: 50px;
 }
 
@@ -38,6 +56,7 @@ header.rolagem {
     font-size: 21px;
     cursor: pointer;
     border: none;
+    transition: .5s;
 }
 .icon:hover, .iconx:hover {
     color: var(--cor-projeto);
@@ -65,10 +84,12 @@ header.rolagem {
     right: 0;
     border: 1px solid rgba(0, 0, 0, 0.352);
     animation-duration: .2s;
+    transition: .5s;
 }
 .menu li {
     padding: 10px 0;
     background-color: var(--cor-menu-mobile);
+    transition: .5s;
 }
 .menu a {
     color: black;
@@ -77,42 +98,118 @@ header.rolagem {
     width: 100%;
     display: flex;
     justify-content: center;
+    transition: .5s;
 }
 .menu a:hover{
     color: var(--cor-projeto);
-    transition: color 0.3s ease;
 }
 
 @keyframes showSidebar {
     from {margin-right: -200vh;}
-    top {margin-right: 0px;}
+    to {margin-right: 0px;}
 }
 /*********  fim do header  *********/
 
 
+/**************************************************************/
 
-main{
-    display: flex;
+
+/*********  Começo do main  *********/
+main {
+    height: 100vh;
 }
-main h1{
+
+section {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.primeira-pagina {
+    height: 100vh;
+    padding-top: 140px;
+}
+
+.texto {
+    padding: 0px 40px;
+}
+
+h1 span {
     color: var(--cor-projeto);
 }
-.lado1, .lado2{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.texto p {
+    padding: 10px 0 20px 0;
 }
-main img{
-    width: 300px;
-}
-.bola{
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
+
+.texto a {
+    color: var(--cor-fonte-contraste);
     background-color: var(--cor-projeto);
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
 }
+
+.quarter-circle {
+    background-color: var(--cor-projeto);
+    border-top-left-radius: 100%;
+    position: absolute;
+    bottom: 78px;
+    right: 0;
+    width: 60vw;
+    height: 60vw;
+}
+
+.logo {
+    width: 55vw;
+    object-fit: contain;
+    position: absolute;
+    left: -15%;
+    top: 12%;
+    filter: drop-shadow(20px, 20px, 20px, #434343);
+}
+
+.projetos-mobile {
+    width: 100%;
+    background-color: var(--cor-projeto);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+.projetos-mobile a {
+    color: var(--cor-fonte-contraste);
+    background-color: var(--cor-menu-mobile2);
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.projetos-mobile a:hover {
+    background-color: var(--cor-fonte-hover);
+}
+
+.segunda-pagina {
+    background-color: var(--cor-projeto);
+    background-image: url('../imagens/membros/imagem_fundo.png');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    align-items: center;
+    color: var(--cor-fonte-contraste);
+    width: 100%;
+    padding: 130px 40px 0 40px;
+}
+
+.segunda-pagina p {
+    padding: 40px 0;
+}
+/*********  Fim do main  *********/
+
 
 @media screen and (min-width: 700px) {
 
@@ -137,6 +234,9 @@ main img{
     }
     .menu a {
         background-color: var(--cor-fundo);
+    }
+    header.cor .menu ul, header.cor .menu li, header.cor .menu a {
+        background-color: var(--cor-projeto);
     }
 /*********  fim do header  *********/
 
