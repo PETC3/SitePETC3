@@ -150,6 +150,10 @@ h1 span {
     text-decoration: none;
 }
 
+.projetos-pc {
+    display: none;
+}
+
 .quarter-circle {
     background-color: var(--cor-projeto);
     border-top-left-radius: 100%;
@@ -194,7 +198,7 @@ h1 span {
 
 .segunda-pagina {
     background-color: var(--cor-projeto);
-    background-image: url('../imagens/membros/imagem_fundo.png');
+    background-image: var(--imagem-fundo-secao2);
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
@@ -211,13 +215,14 @@ h1 span {
 /*********  Fim do main  *********/
 
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1024px) {
 
 
 /*********  Começo do header  *********/
     header button {
         display: none;
     }
+
     .menu ul {
         position: relative;
         display: flex;
@@ -228,18 +233,53 @@ h1 span {
         background-color: var(--cor-fundo);
         border: none;
     }
+    
     .menu li {
         padding: 0 20px;
         background-color: var(--cor-fundo);
     }
+
     .menu a {
         background-color: var(--cor-fundo);
     }
+
     header.cor .menu ul, header.cor .menu li, header.cor .menu a {
         background-color: var(--cor-projeto);
     }
 /*********  fim do header  *********/
 
 
+/**************************************************************/
 
+
+/*********  Começo do main  *********/
+    .texto {
+        width: 50%;
+    }
+
+    .projetos-pc {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 30px;
+    }
+
+    .quarter-circle {
+        bottom: 0;
+    }
+
+    .projetos-mobile {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .quarter-circle {
+        width: 87vh;
+        height: 87vh;
+    }
+
+    .logo {
+        width: 70vh;
+    }
 }
