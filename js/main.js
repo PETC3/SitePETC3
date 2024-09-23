@@ -27,3 +27,13 @@ window.addEventListener("scroll", function(){
     header.classList.remove('cor');
   }
 })
+
+document.getElementById('animateLink').addEventListener('click', function(event) {
+  event.preventDefault(); // Evita o comportamento padrão do link
+  document.querySelector('.circle').classList.add('grow'); // Adiciona a classe para iniciar a animação
+  
+  // Espera o tempo da animação antes de redirecionar
+  setTimeout(function() {
+      window.location.href = event.target.href;
+  }, 700); // 1500ms corresponde à duração da animação
+});

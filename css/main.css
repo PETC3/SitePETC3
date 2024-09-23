@@ -13,6 +13,42 @@ html {
     color: var(--cor-fonte);
 }
 
+.circle {
+    background-color: var(--cor-projeto);
+    animation: growCircleInicio .7s forwards;
+    border-top-left-radius: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+}
+
+@keyframes growCircleInicio {
+    0% {
+        width: 200vw;
+        height: 200vw;
+    }
+    100% {
+        width: 0vw;
+        height: 0vw;
+    }
+}
+
+.circle.grow {
+    animation: growCircleFinal .7s forwards;
+}
+
+@keyframes growCircleFinal {
+    0% {
+        width: 0vw;
+        height: 0vw;
+    }
+    100% {
+        width: 200vw;
+        height: 200vw;
+    }
+}
+
 
 
 /*********  Começo do header  *********/
