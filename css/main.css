@@ -127,18 +127,38 @@ header.cor .menu a:hover, header.cor .menu .iconx:hover, header.cor .menu .iconx
     background-color: var(--cor-menu-mobile);
     transition: .5s;
 }
+
+.menu a:hover{
+    color: var(--cor-projeto);
+}
+
 .menu a {
-    color: black;
     text-decoration: none;
+    color: black;
     background-color: var(--cor-menu-mobile);
     width: 100%;
     display: flex;
     justify-content: center;
+    position: relative;
     transition: .5s;
 }
-.menu a:hover{
-    color: var(--cor-projeto);
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-projeto);
+    bottom: -5px;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
 }
+
+.menu a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
 
 @keyframes showSidebar {
     from {margin-right: -200vh;}
@@ -170,12 +190,17 @@ section {
     padding: 0px 40px;
 }
 
-h1 span {
+.texto h1 span {
     color: var(--cor-projeto);
+}
+
+.texto h1 {
+    font-size: 2em;
 }
 
 .texto p {
     padding: 10px 0 20px 0;
+    font-size: 1em;
 }
 
 .texto a {
@@ -190,7 +215,7 @@ h1 span {
     display: none;
 }
 .slider{
-    width: 50%;
+    width: 45vw;
     height: var(--height);
     overflow: hidden;
     mask-image: linear-gradient(
@@ -250,16 +275,16 @@ h1 span {
     position: absolute;
     bottom: 0px;
     right: 0;
-    width: 60vw;
-    height: 60vw;
+    width: 80vw;
+    height: 80vw;
 }
 
 .logo {
-    width: 55vw;
+    width: 60vw;
     object-fit: contain;
     position: absolute;
-    left: -15%;
-    top: 12%;
+    left: -8%;
+    top: 15%;
     filter: drop-shadow(20px, 20px, 20px, #434343);
 }
 
@@ -296,6 +321,7 @@ h1 span {
     align-items: center;
     color: var(--cor-fonte-contraste);
     width: 100%;
+    min-height: 100vh;
     padding: 130px 40px 0 40px;
 }
 
@@ -347,6 +373,14 @@ h1 span {
         width: 50%;
     }
 
+    .texto h1{
+        font-size: 40px;
+    }
+
+    .texto p{
+        font-size: 18px;
+    }
+
     .projetos-pc {
         display: flex;
         justify-content: center;
@@ -361,15 +395,129 @@ h1 span {
     .projetos-mobile {
         display: none;
     }
+
+    .segunda-pagina {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .info-projeto {
+        width: 100%;
+        display: flex;
+    }
+
+    .pt1, .pt2 {
+        width: 100%;
+    }
+
+    .pt1 h1 {
+        font-size: 40px;
+    }
+
+    .pt1 p, .pt2 p {
+        font-size: 18px;
+    }
+
+    .pt1 {
+        padding-right: 20px;
+    }
+
+    .pt2 {
+        padding-top: 45px;
+        padding-left: 20px;
+    }
 }
 
-@media screen and (min-width: 1350px) {
+
+/*********  Responsividade do circulo  *********/
+@media screen and (min-width: 600px) {
+    .quarter-circle {
+        width: 75vw;
+        height: 75vw;
+    }
+
+    .logo {
+        width: 69vw;
+    }
+}
+@media screen and (min-width: 650px) {
+    .quarter-circle {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .logo {
+        width: 61vw;
+    }
+}
+@media screen and (min-width: 750px) {
+    .quarter-circle {
+        width: 65vw;
+        height: 65vw;
+    }
+
+    .logo {
+        width: 53vw;
+    }
+}
+@media screen and (min-width: 820px) {
+    .quarter-circle {
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .logo {
+        width: 48vw;
+    }
+}
+@media screen and (min-width: 900px) {
+    .quarter-circle {
+        width: 55vw;
+        height: 55vw;
+    }
+
+    .logo {
+        width: 43vw;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .quarter-circle {
+        width: 70vh;
+        height: 70vh;
+    }
+
+    .logo {
+        width: 60vh;
+    }
+}
+@media screen and (min-width: 1110px) {
+    .quarter-circle {
+        width: 75vh;
+        height: 75vh;
+    }
+
+    .logo {
+        width: 65vh;
+    }
+}
+@media screen and (min-width: 1210px) {
+    .quarter-circle {
+        width: 80vh;
+        height: 80vh;
+    }
+
+    .logo {
+        width: 70vh;
+    }
+}
+@media screen and (min-width: 1290px) {
     .quarter-circle {
         width: 87vh;
         height: 87vh;
     }
 
     .logo {
-        width: 70vh;
+        width: 73vh;
     }
 }

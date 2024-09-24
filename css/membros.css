@@ -12,7 +12,7 @@ body {
     color: var(--cor-fundo);
 }
 .circle {
-    background-color: var(--cor-projeto);
+    background-color: yellow;
     animation: growCircleInicio .7s forwards;
     border-top-left-radius: 100%;
     position: fixed;
@@ -46,6 +46,7 @@ body {
         height: 200vw;
     }
 }
+
 header {
     display: flex;
     justify-content: space-between;
@@ -93,6 +94,31 @@ header button {
 .menu a:hover {
     color: #397dd4;
     transition: color 0.3s ease;
+}
+.menu a {
+    text-decoration: none;
+    color: var(--cor-fundo);
+    position: relative;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    bottom: -5px;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.menu a:hover {
+    color: #397dd4;
 }
 
 
@@ -213,6 +239,21 @@ main h1 {
 .image-container:hover .overlay {
     opacity: 1;
     transform: scale(1.15); /* aumenta o tamanho do fundo também */
+}
+
+/* Animação de tremida */
+@keyframes vibrar {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+    100% { transform: translateX(0); }
+}
+
+.text-container .icon-links a:hover {
+    color: #397dd4;
+    transition: color 0.3s ease;
+    animation: vibrar 0.3s ease-in-out;
 }
 
 
