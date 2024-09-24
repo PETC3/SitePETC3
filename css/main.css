@@ -71,17 +71,16 @@ header.rolagem {
 
 header.cor, header.cor .icon {
     background-color: var(--cor-projeto);
-    color: var(--cor-fonte-contraste);
+    color: var(--cor-fonte2);
 }
 
 header.cor .menu ul, header.cor .menu li, header.cor .menu a, header.cor .menu .iconx, header.cor .menu .iconxi {
     background-color: var(--cor-menu-mobile2);
-    color: var(--cor-fonte-contraste);
-    transition: .5s;
+    color: var(--cor-fonte2);
 }
 
 header.cor .menu a:hover, header.cor .menu .iconx:hover, header.cor .menu .iconxi:hover, header.cor .icon:hover {
-    color: var(--cor-fonte-hover);
+    color: var(--cor-hover2);
 }
 
 .logo-header {
@@ -95,7 +94,7 @@ header.cor .menu a:hover, header.cor .menu .iconx:hover, header.cor .menu .iconx
     transition: .5s;
 }
 .icon:hover, .iconx:hover {
-    color: var(--cor-projeto);
+    color: var(--cor-hover);
 }
 .iconx {
     position: absolute;
@@ -105,6 +104,7 @@ header.cor .menu a:hover, header.cor .menu .iconx:hover, header.cor .menu .iconx
 }
 .iconxi {
     background-color: var(--cor-menu-mobile);
+    transition: .5s;
 }
 .menu {
     width: 100%;
@@ -129,7 +129,7 @@ header.cor .menu a:hover, header.cor .menu .iconx:hover, header.cor .menu .iconx
 }
 
 .menu a:hover{
-    color: var(--cor-projeto);
+    color: var(--cor-hover);
 }
 
 .menu a {
@@ -148,10 +148,14 @@ header.cor .menu a:hover, header.cor .menu .iconx:hover, header.cor .menu .iconx
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: var(--cor-projeto);
+    background-color: var(--cor-hover);
     bottom: -5px;
     left: 50%;
     transition: width 0.3s ease, left 0.3s ease;
+}
+
+header.cor .menu a::after {
+    background-color: var(--cor-hover2);
 }
 
 .menu a:hover::after {
@@ -204,11 +208,16 @@ section {
 }
 
 .texto a {
-    color: var(--cor-fonte-contraste);
+    color: var(--cor-fonte2);
     background-color: var(--cor-projeto);
     padding: 10px;
     border-radius: 20px;
     text-decoration: none;
+}
+
+.texto a:hover {
+    background-color: var(--cor-hover);
+    transition: .5s;
 }
 
 .projetos-pc {
@@ -288,29 +297,6 @@ section {
     filter: drop-shadow(20px, 20px, 20px, #434343);
 }
 
-.projetos-mobile {
-    width: 100%;
-    background-color: var(--cor-fundo);
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    position: absolute;
-    bottom: 0;
-}
-
-.projetos-mobile a {
-    color: var(--cor-fonte-contraste);
-    background-color: var(--cor-menu-mobile2);
-    margin: 0 10px;
-    padding: 10px;
-    border-radius: 20px;
-    text-decoration: none;
-}
-
-.projetos-mobile a:hover {
-    background-color: var(--cor-fonte-hover);
-}
-
 .segunda-pagina {
     background-color: var(--cor-projeto);
     background-image: var(--imagem-fundo-secao2);
@@ -319,7 +305,7 @@ section {
     background-repeat: no-repeat;
     background-attachment: fixed;
     align-items: center;
-    color: var(--cor-fonte-contraste);
+    color: var(--cor-fonte2);
     width: 100%;
     min-height: 100vh;
     padding: 130px 40px 0 40px;
@@ -390,10 +376,6 @@ section {
 
     .quarter-circle {
         bottom: 0;
-    }
-
-    .projetos-mobile {
-        display: none;
     }
 
     .segunda-pagina {

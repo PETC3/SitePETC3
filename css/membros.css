@@ -12,7 +12,7 @@ body {
     color: var(--cor-fundo);
 }
 .circle {
-    background-color: yellow;
+    background-color: var(--cor-projeto);
     animation: growCircleInicio .7s forwards;
     border-top-left-radius: 100%;
     position: fixed;
@@ -92,7 +92,7 @@ header button {
     width: 100%;
 }
 .menu a:hover {
-    color: #397dd4;
+    color: var(--cor-hover2);
     transition: color 0.3s ease;
 }
 .menu a {
@@ -118,7 +118,7 @@ header button {
 }
 
 .menu a:hover {
-    color: #397dd4;
+    color: var(--cor-hover2);
 }
 
 
@@ -231,7 +231,7 @@ main h1 {
     font-size: 24px;
 }
 .text-container .icon-links a:hover {
-    color: #397dd4; /* Cor desejada ao passar o mouse */
+    color: var(--cor-hover2); /* Cor desejada ao passar o mouse */
     transition: color 0.3s ease; /* Animação suave de 0.3 segundos */
 }
 
@@ -251,7 +251,7 @@ main h1 {
 }
 
 .text-container .icon-links a:hover {
-    color: #397dd4;
+    color: var(--cor-hover2);
     transition: color 0.3s ease;
     animation: vibrar 0.3s ease-in-out;
 }
@@ -266,16 +266,16 @@ main h1 {
         background-color: var(--cor-projeto);
     }
     .icon:hover, .iconx:hover {
-        color: #397dd4;
+        color: var(--cor-hover2);
     }
     .iconx {
         position: absolute;
-        background-color: #103769;
+        background-color: var(--cor-menu-mobile2);
         right: 40px;
         top: 28px;
     }
     .iconxi {
-        background-color: #103769;
+        background-color: var(--cor-menu-mobile2);
     }
     header button {
         display: block;
@@ -289,16 +289,16 @@ main h1 {
         margin-right: -200vh;
         padding: 110px 30px;
         height: 100vh;
-        background-color: #103769;
+        background-color: var(--cor-menu-mobile2);
         border: 1px solid rgba(0, 0, 0, 0.352);
         animation-duration: .2s;
     }
     .menu li {
         padding: 10px 0;
-        background-color: #103769;
+        background-color: var(--cor-menu-mobile2);
     }
     .menu a {
-        background-color: #103769;
+        background-color: var(--cor-menu-mobile2);
         display: flex;
         justify-content: center;
     }

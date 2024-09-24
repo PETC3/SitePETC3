@@ -28,12 +28,17 @@ window.addEventListener("scroll", function(){
   }
 })
 
-document.getElementById('animateLink').addEventListener('click', function(event) {
-  event.preventDefault(); // Evita o comportamento padrão do link
-  document.querySelector('.circle').classList.add('grow'); // Adiciona a classe para iniciar a animação
-  
-  // Espera o tempo da animação antes de redirecionar
-  setTimeout(function() {
-      window.location.href = event.target.href;
-  }, 700); // 1500ms corresponde à duração da animação
+// Seleciona todos os links com a classe 'animateLink'
+const animateLinks = document.querySelectorAll('.animateLink');
+
+animateLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Evita o comportamento padrão do link
+        document.querySelector('.circle').classList.add('grow'); // Adiciona a classe para iniciar a animação
+        
+        // Espera o tempo da animação antes de redirecionar
+        setTimeout(function() {
+            window.location.href = link.href;
+        }, 700); // 1500ms corresponde à duração da animação
+    });
 });

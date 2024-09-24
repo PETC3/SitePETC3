@@ -3,9 +3,10 @@
     --cor-fonte: #000000;
     --cor-menu-mobile: #e8e8e8;
     --cor-projeto: #16498C;
+    --cor-hover: #0e19e6;
+    --cor-fonte2: #f2f2f2;
     --cor-menu-mobile2: #103769;
-    --cor-fonte-contraste: #f2f2f2;
-    --cor-fonte-hover: #397dd4;
+    --cor-hover2: #397dd4;
     --imagem-fundo-secao2: url('../imagens/membros/imagem_fundo.png');
 }
 .petcode:root {
@@ -13,8 +14,9 @@
 }
 .alongapet:root {
     --cor-projeto: #FFD600;
+    --cor-hover: #FFD600;
+    --cor-fonte2: #000;
     --cor-menu-mobile2: #ffbf00;
-    --cor-fonte-contraste: #000;
-    --cor-fonte-hover: #e9ff58;
+    --cor-hover2: #e9ff58;
     --imagem-fundo-secao2: url('../imagens/membros/membro1.png');
 }
