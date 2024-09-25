@@ -39,6 +39,13 @@ animateLinks.forEach(link => {
         // Espera o tempo da animação antes de redirecionar
         setTimeout(function() {
             window.location.href = link.href;
-        }, 700); // 1500ms corresponde à duração da animação
+        }, 100); // 700ms corresponde à duração da animação
     });
 });
+
+function adicionarAnimacao() {
+  const circle = document.querySelector('.circle');
+  circle.classList.remove('grow'); // Remove a classe para permitir a reativação
+  void circle.offsetWidth; // Força o reflow para reiniciar a animação
+  circle.classList.add('grow'); // Adiciona a classe para iniciar a animação
+}

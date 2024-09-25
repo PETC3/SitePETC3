@@ -11,12 +11,17 @@
 }
 .petcode:root {
     --cor-projeto: #671A99;
+    --cor-hover: #671A99;
+    --cor-fonte2: #fff;
+    --cor-menu-mobile2: #671A99;
+    --cor-hover2: #1E90FF;
+    --imagem-fundo-secao2: url('../imagens/main/fundo_petcode.png');
 }
 .alongapet:root {
-    --cor-projeto: #FFD600;
-    --cor-hover: #FFD600;
+    --cor-projeto: #ef9b0f;
+    --cor-hover: #ef9b0f;
     --cor-fonte2: #000;
-    --cor-menu-mobile2: #ffbf00;
+    --cor-menu-mobile2: #ef9b0f;
     --cor-hover2: #e9ff58;
-    --imagem-fundo-secao2: url('../imagens/membros/membro1.png');
+    --imagem-fundo-secao2: url('../imagens/main/fundo_alongapet.png');
 }

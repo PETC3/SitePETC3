@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="">
+<html lang="pt-br" class="" id="classeprojeto">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +8,19 @@
     <link rel="stylesheet" href="../css/main.css">
     <script src="../js/main.js" defer></script>
     <script src="../js/logoheader.js" defer></script>
+    <script src="../js/pet.js" defer></script>
+    <script src="../js/alongapet.js" defer></script>
+    <script src="../js/petcode.js" defer></script>
 </head>
 <body>
     <div class="circle"></div>
     <header id="header">
-        <a href="index.html" class="animateLink"><img src="../imagens/main/logo_pet_preta.png" alt="Logo PET C3" class="logo-header" id="logo"></a>
+        <a href="index.html" class="animateLink" onclick="adicionarAnimacao(); return false;"><img src="../imagens/main/logo_pet_preta.png" alt="Logo PET C3" class="logo-header" id="logo"></a>
         <nav class="menu">
             <ul id="nav_header">
                 <button class="iconx" onclick="toggleSidebar()"><i class="fa-solid fa-xmark iconxi"></i></button>
-                <li><a href="index.html" class="nav_link animateLink">Home</a></li>
-                <li><a href="membros.html" class="nav_link animateLink">Membros</a></li>
+                <li><a href="index.html" class="nav_link animateLink" onclick="adicionarAnimacao(); return false;">Home</a></li>
+                <li><a href="membros.html" class="nav_link animateLink" onclick="adicionarAnimacao(); return false;">Membros</a></li>
                 <li><a href="#" class="nav_link">Sobre</a></li>
             </ul>
         </nav>
@@ -26,8 +29,8 @@
     <main>
         <section class="primeira-pagina">
             <div class="texto">
-                <h1>O <span>PET de Ciências Computacionais</span></h1>
-                <p>O PET Ciências Computacionais é um grupo que faz parte do Programa de Educação Tutorial. O grupo atualmente é formado por 18 graduandos, dos cursos de Engenharia de Automação, Engenharia de Computação e Sistema de Informação, da Universidade Federal do Rio Grande, e por um professor tutor.</p>
+                <h1>O <span id="titulo">PET de Ciências Computacionais</span></h1>
+                <p id="descricao">O PET Ciências Computacionais é um grupo que faz parte do Programa de Educação Tutorial. O grupo atualmente é formado por 18 graduandos, dos cursos de Engenharia de Automação, Engenharia de Computação e Sistema de Informação, da Universidade Federal do Rio Grande, e por um professor tutor.</p>
                 <a href="#saiba-mais">Saiba Mais</a>
                 <div class="slider projetos-pc" reverse="true" style="
                     --width: 200px;
@@ -35,20 +38,20 @@
                     --quantity: 9;
                 ">
                     <div class="list">
-                        <div class="item" style="--position: 3"><img src="../imagens/main/logo_pet_preta.png" alt=""></div>
-                        <div class="item" style="--position: 2"><img src="../imagens/main/logo_pet_preta.png" alt=""></div>
-                        <div class="item" style="--position: 3"><img src="../imagens/main/logo_pet_preta.png" alt=""></div>
-                        <div class="item" style="--position: 4"><img src="../imagens/main/logo_pet_preta.png" alt=""></div>
-                        <div class="item" style="--position: 5"><img src="../imagens/main/logo_pet_preta.png" alt=""></div>
-                        <div class="item" style="--position: 6"><img src="../imagens/main/logo_pet_preta.png" alt=""></div>
-                        <div class="item" style="--position: 7"><img src="../imagens/main/logo_pet_preta.png" alt=""></div>
-                        <div class="item" style="--position: 8"><img src="../imagens/main/logo_pet_preta.png" alt=""></div>
-                        <div class="item" style="--position: 9"><img src="../imagens/main/logo_pet_preta.png" alt=""></div>
+                        <div class="item" style="--position: 1"><a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoAlonga(); return false;"><img src="../imagens/main/alongapet_preto.png" alt=""></a></div>
+                        <div class="item" style="--position: 2"><a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoPet(); return false;"><img src="../imagens/main/logo_pet_branca.png" alt=""></a></div>
+                        <div class="item" style="--position: 3"><a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoAlonga(); return false;"><img src="../imagens/main/logo_pet_preta.png" alt=""></a></div>
+                        <div class="item" style="--position: 4"><a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoPet(); return false;"><img src="../imagens/main/logo_pet_branca.png" alt=""></a></div>
+                        <div class="item" style="--position: 5"><a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoPetcode(); return false;"><img src="../imagens/main/petcode.png" alt=""></a></div>
+                        <div class="item" style="--position: 6"><a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoPet(); return false;"><img src="../imagens/main/logo_pet_branca.png" alt=""></a></div>
+                        <div class="item" style="--position: 7"><a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoAlonga(); return false;"><img src="../imagens/main/logo_pet_preta.png" alt=""></a></div>
+                        <div class="item" style="--position: 8"><a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoPet(); return false;"><img src="../imagens/main/logo_pet_branca.png" alt=""></a></div>
+                        <div class="item" style="--position: 9"><a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoAlonga(); return false;"><img src="../imagens/main/logo_pet_preta.png" alt=""></a></div>
                     </div>
                 </div>
             </div>
             <div class="quarter-circle">
-                <img src="../imagens/main/logo_pet_preta.png" alt="" class="logo">
+                <img src="../imagens/main/logo_pet_colorida.png" alt="" class="logo" id="logobola">
             </div>
             <div class="button-container">
                 <a href="#"><img src="../imagens/main/logo_pet_preta.png" alt="PET Code"></a>
@@ -81,5 +84,6 @@
             </div>
         </section>
     </main>
+    
 </body>
 </html>

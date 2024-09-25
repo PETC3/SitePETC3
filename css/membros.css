@@ -332,7 +332,4 @@ main h1 {
         opacity: 1;
         transform: scale(1.1); /* aumenta o tamanho do fundo também */
     }
-    ::-webkit-scrollbar{
-        width: 0;
-    }
 }
