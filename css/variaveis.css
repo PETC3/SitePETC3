@@ -9,27 +9,20 @@
     --cor-hover2: #397dd4;
     --imagem-fundo-secao2: url('../imagens/membros/imagem_fundo.png');
 }
-.petcode:root {
-    --cor-projeto: #671A99;
-    --cor-hover: #671A99;
-    --cor-fonte2: #fff;
-    --cor-menu-mobile2: #671A99;
-    --cor-hover2: #1E90FF;
-    --imagem-fundo-secao2: url('../imagens/main/fundo_petcode.png');
+
+.almoxarifado:root {
+    --cor-projeto: #ffd400;
+    --cor-hover: #ffd400;
+    --cor-fonte2: #000;
+    --cor-menu-mobile2: #ffd400;
+    --cor-hover2: #e9ff58;
+    --imagem-fundo-secao2: url('../imagens/main/fundo_alongapet.png');
 }
 .alongapet:root {
     --cor-projeto: #ef9b0f;
     --cor-hover: #ef9b0f;
     --cor-fonte2: #000;
     --cor-menu-mobile2: #ef9b0f;
-    --cor-hover2: #e9ff58;
-    --imagem-fundo-secao2: url('../imagens/main/fundo_alongapet.png');
-}
-.almoxarifado:root {
-    --cor-projeto: #ffd400;
-    --cor-hover: #ffd400;
-    --cor-fonte2: #000;
-    --cor-menu-mobile2: #ffd400;
     --cor-hover2: #e9ff58;
     --imagem-fundo-secao2: url('../imagens/main/fundo_alongapet.png');
 }
@@ -41,14 +34,6 @@
     --cor-hover2: #35fd8c;
     --imagem-fundo-secao2: url('../imagens/main/fundo_alongapet.png');
 }
-.revista:root {
-    --cor-projeto: #4f83b4;
-    --cor-hover: #4f83b4;
-    --cor-fonte2: #fff;
-    --cor-menu-mobile2: #4f83b4;
-    --cor-hover2: #0d3861;
-    --imagem-fundo-secao2: url('../imagens/main/fundo_alongapet.png');
-}
 .momentos:root {
     --cor-projeto: #db96e3;
     --cor-hover: #db96e3;
@@ -57,4 +42,27 @@
     --cor-hover2: #650470;
     --imagem-fundo-secao2: url('../imagens/main/fundo_momentos.png');
 }
-
+.petapp:root {
+    --cor-projeto: #2c2c2c;
+    --cor-hover: #646461;
+    --cor-fonte2: #f2f2f2;
+    --cor-menu-mobile2: #2c2c2c;
+    --cor-hover2: #f2f2f2;
+    --imagem-fundo-secao2: url('../imagens/main/fundo_petapp.png');
+}
+.petcode:root {
+    --cor-projeto: #671A99;
+    --cor-hover: #671A99;
+    --cor-fonte2: #fff;
+    --cor-menu-mobile2: #671A99;
+    --cor-hover2: #1E90FF;
+    --imagem-fundo-secao2: url('../imagens/main/fundo_petcode.png');
+}
+.revista:root {
+    --cor-projeto: #4f83b4;
+    --cor-hover: #4f83b4;
+    --cor-fonte2: #fff;
+    --cor-menu-mobile2: #4f83b4;
+    --cor-hover2: #0d3861;
+    --imagem-fundo-secao2: url('../imagens/main/fundo_alongapet.png');
+}
