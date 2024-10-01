@@ -211,7 +211,7 @@ section {
     font-size: 1em;
 }
 
-.texto a {
+.texto .sm {
     color: var(--cor-fonte2);
     background-color: var(--cor-projeto);
     padding: 10px;
@@ -219,10 +219,11 @@ section {
     text-decoration: none;
 }
 
-.texto a:hover {
+.texto .sm:hover {
     background-color: var(--cor-hover);
     transition: .5s;
 }
+
 
 .projetos-pc {
     display: none;
@@ -337,8 +338,12 @@ section {
     padding: 130px 40px 0 40px;
 }
 
+.segunda-pagina h1 {
+    padding: 5px 0;
+}
+
 .segunda-pagina p {
-    padding: 40px 0;
+    padding: 15px 0;
 }
 /*********  Fim do main  *********/
 
@@ -432,7 +437,7 @@ section {
     }
 
     .pt2 {
-        padding-top: 45px;
+        padding-top: 93px;
         padding-left: 20px;
     }
 }

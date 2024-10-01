@@ -5,6 +5,11 @@
     let imagemURL = "../imagens/main/petapp.png";
     let classe = "petapp";
 
+    let paragrafo1 = "paragrafo de teste para o PETAPP";
+    let paragrafo2 = "estou apenas testando para o PETAPP";
+    let paragrafo3 = "testo novamente para o PETAPP";
+    let paragrafo4 = "não paro de testar para o PETAPP";
+
     // Função para atualizar o conteúdo com delay
     window.carregarConteudoPetapp = function() {
         setTimeout(() => {
@@ -12,6 +17,12 @@
             document.getElementById('descricao').textContent = descricao;
             document.getElementById('logobola').src = imagemURL;
             document.getElementById('classeprojeto').className = classe;
-        }, 300); // 700ms de atraso
+
+            document.getElementById('titulo2').textContent = titulo;
+            document.getElementById('paragrafo1').textContent = paragrafo1;
+            document.getElementById('paragrafo2').textContent = paragrafo2;
+            document.getElementById('paragrafo3').textContent = paragrafo3;
+            document.getElementById('paragrafo4').textContent = paragrafo4;
+        }, 300);
     };
 })();
