@@ -3,20 +3,27 @@
     --cor-fonte: #000000;
     --cor-menu-mobile: #e8e8e8;
     --cor-projeto: #16498C;
-    --cor-hover: #0e19e6;
+    --cor-hover: #030b64;
     --cor-fonte2: #f2f2f2;
     --cor-menu-mobile2: #103769;
     --cor-hover2: #397dd4;
     --imagem-fundo-secao2: url('../imagens/membros/imagem_fundo.png');
 }
-
+.administrativo:root {
+    --cor-projeto: #f1a7a6;
+    --cor-hover: #0c89bb;
+    --cor-fonte2: #fff;
+    --cor-menu-mobile2: #f1a7a6 ;
+    --cor-hover2: #0c89bb;
+    --imagem-fundo-secao2: url('../imagens/main/fundo_administrativo.png');
+}
 .almoxarifado:root {
     --cor-projeto: #ffd400;
-    --cor-hover: #ffd400;
+    --cor-hover: #dfba00;
     --cor-fonte2: #000;
     --cor-menu-mobile2: #ffd400;
-    --cor-hover2: #e9ff58;
-    --imagem-fundo-secao2: url('../imagens/main/fundo_alongapet.png');
+    --cor-hover2: #fff;
+    --imagem-fundo-secao2: url('../imagens/main/fundo_almoxarifado.png');
 }
 .alongapet:root {
     --cor-projeto: #ef9b0f;
@@ -26,30 +33,31 @@
     --cor-hover2: #e9ff58;
     --imagem-fundo-secao2: url('../imagens/main/fundo_alongapet.png');
 }
+.bytleas:root {
+    --cor-projeto: #8b949d;
+    --cor-hover: #494948;
+    --cor-fonte2: #f2f2f2;
+    --cor-menu-mobile2: #8b949d;
+    --cor-hover2: #f2f2f2;
+    --imagem-fundo-secao2: url('../imagens/main/fundo_bytleas.png');
+}
 .lego:root {
     --cor-projeto: #187540;
     --cor-hover: #187540;
     --cor-fonte2: #fff;
     --cor-menu-mobile2: #187540;
     --cor-hover2: #35fd8c;
-    --imagem-fundo-secao2: url('../imagens/main/fundo_alongapet.png');
+    --imagem-fundo-secao2: url('../imagens/main/fundo_lego.png');
 }
 .momentos:root {
-    --cor-projeto: #db96e3;
-    --cor-hover: #db96e3;
+    --cor-projeto: #9b65a0;
+    --cor-hover: #650470;
     --cor-fonte2: #000;
-    --cor-menu-mobile2: #db96e3;
-    --cor-hover2: #650470;
+    --cor-menu-mobile2: #9b65a0;
+    --cor-hover2: #fff;
     --imagem-fundo-secao2: url('../imagens/main/fundo_momentos.png');
 }
-.petapp:root {
-    --cor-projeto: #2c2c2c;
-    --cor-hover: #646461;
-    --cor-fonte2: #f2f2f2;
-    --cor-menu-mobile2: #2c2c2c;
-    --cor-hover2: #f2f2f2;
-    --imagem-fundo-secao2: url('../imagens/main/fundo_petapp.png');
-}
+
 .petcode:root {
     --cor-projeto: #671A99;
     --cor-hover: #671A99;
@@ -64,5 +72,5 @@
     --cor-fonte2: #fff;
     --cor-menu-mobile2: #4f83b4;
     --cor-hover2: #0d3861;
-    --imagem-fundo-secao2: url('../imagens/main/fundo_alongapet.png');
+    --imagem-fundo-secao2: url('../imagens/main/fundo_revista.png');
 }

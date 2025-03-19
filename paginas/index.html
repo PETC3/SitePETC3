@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="" id="classeprojeto">
 <head>
+    <!-- Link para o CSS do Swiper -->
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Script do Swiper (para o funcionamento da navegação e animações) -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PET C3</title>
@@ -15,7 +19,8 @@
     <script src="../js/lego.js" defer></script>
     <script src="../js/revista.js" defer></script>
     <script src="../js/momentos.js" defer></script>
-    <script src="../js/petapp.js" defer></script>
+    <script src="../js/bytleas.js" defer></script>
+    <script src="../js/administrativo.js" defer></script>
 </head> 
 <body>
     <div class="circle"></div>
@@ -25,8 +30,8 @@
             <ul id="nav_header">
                 <button class="iconx" onclick="toggleSidebar()"><i class="fa-solid fa-xmark iconxi"></i></button>
                 <li><a href="index.html" class="nav_link animateLink" onclick="adicionarAnimacao(); return false;">Home</a></li>
-                <li><a href="membros.html" class="nav_link animateLink" onclick="adicionarAnimacao(); return false;">Membros</a></li>
-                <li><a href="#" class="nav_link">Sobre</a></li>
+                <li><a href="membros.html" class="nav_link animateLinkLongo" onclick="adicionarAnimacaoLonga(); return false;">Membros</a></li>
+                <li><a href="sobre.html" class="nav_link animateLink" onclick="adicionarAnimacao(); return false;">Sobre</a></li>
             </ul>
         </nav>
         <button class="icon" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
@@ -35,52 +40,144 @@
         <section class="primeira-pagina">
             <div class="texto">
                 <h1>O <span id="titulo">PET de Ciências Computacionais</span></h1>
-                <p id="descricao">O PET Ciências Computacionais é um grupo que faz parte do Programa de Educação Tutorial. O grupo atualmente é formado por 18 graduandos, dos cursos de Engenharia de Automação, Engenharia de Computação e Sistema de Informação, da Universidade Federal do Rio Grande, e por um professor tutor.</p>
+                <p id="descricao">O PET Ciências Computacionais é um grupo de 18 estudantes de automação, computação e sistemas de informação que, com a orientação de um professor, explora ensino, pesquisa e extensão para criar experiências de aprendizado únicas.</p>
                 <a href="#saiba-mais" class="sm">Saiba Mais</a>
                 <div class="slider projetos-pc" reverse="true" style="
                     --width: 200px;
                     --height: 200px;
                     --quantity: 9;
                 ">
-                    <div class="list">
-                        <div class="item" style="--position: 1"><a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoLego(); return false;"><img src="../imagens/main/lego.png" alt=""></a></div>
-                        <div class="item" style="--position: 2"><a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoAlmoxarifado(); return false;"><img src="../imagens/main/almoxarifado.png" alt=""></a></div>
-                        <div class="item" style="--position: 3"><a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoRevista(); return false;"><img src="../imagens/main/revista.png" alt=""></a></div>
-                        <div class="item" style="--position: 4"><a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoPet(); return false;"><img src="../imagens/main/logo_pet_branca.png" alt=""></a></div>
-                        <div class="item" style="--position: 5"><a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoPetcode(); return false;"><img src="../imagens/main/petcode.png" alt=""></a></div>
-                        <div class="item" style="--position: 6"><a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoMomentos(); return false;"><img src="../imagens/main/momentos.png" alt=""></a></div>
-                        <div class="item" style="--position: 7"><a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoPetapp(); return false;"><img src="../imagens/main/petapp.png" alt=""></a></div>
-                        <div class="item" style="--position: 8"><a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoPet(); return false;"><img src="../imagens/main/logo_pet_colorida.png" alt=""></a></div>
-                        <div class="item" style="--position: 9"><a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoAlonga(); return false;"><img src="../imagens/main/alongapet_preto.png" alt=""></a></div>
-                    </div>
+                    <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoAlmoxarifado(); return false;">
+                        <img src="../imagens/main/almoxarifado.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoLego(); return false;">
+                        <img src="../imagens/main/lego.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoRevista(); return false;">
+                        <img src="../imagens/main/revista.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoAlonga(); return false;">
+                        <img src="../imagens/main/alongapet_preto.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoPet(); return false;">
+                        <img src="../imagens/main/logo_pet_preta.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoPetcode(); return false;">
+                        <img src="../imagens/main/petcode.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoMomentos(); return false;">
+                        <img src="../imagens/main/momentos.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoBytleas(); return false;">
+                        <img src="../imagens/main/bytleas.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoAdministrativo()  ; return false;">
+                        <img src="../imagens/main/adm.png" alt="">
+                    </a>
+                </div>
+            </div>
                 </div>
             </div>
             <div class="quarter-circle">
                 <img src="../imagens/main/logo_pet_colorida.png" alt="" class="logo" id="logobola">
             </div>
-            <div class="button-container">
-                <a href="#" onclick="adicionarAnimacao(); carregarConteudoCode(); return false;"><img src="../imagens/main/logo_pet_preta.png" alt=""></a>
-                <a href="#" onclick="adicionarAnimacao(); carregarConteudoAlonga(); return false;"><img src="../imagens/main/logo_pet_preta.png" alt=""></a>
-                <a href="#" onclick="adicionarAnimacao(); carregarConteudoMomentos(); return false;"><img src="../imagens/main/logo_pet_preta.png" alt=""></a>
-                <a href="#" onclick="adicionarAnimacao(); carregarConteudoRevista(); return false;"><img src="../imagens/main/logo_pet_preta.png" alt=""></a>
-                <a href="#" onclick="adicionarAnimacao(); carregarConteudoPet(); return false;"><img src="../imagens/main/logo_pet_preta.png" alt= ""></a>
-            </div>
+            <div class="swiper-container projetos-mobile" reverse="true" style="
+    --width: 200px;
+    --height: 200px;
+    --quantity: 9;
+">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoLego(); return false;">
+                <img src="../imagens/main/lego.png" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoAlmoxarifado(); return false;">
+                <img src="../imagens/main/almoxarifado.png" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoRevista(); return false;">
+                <img src="../imagens/main/revista.png" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoPet(); return false;">
+                <img src="../imagens/main/logo_pet_preta.png" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoPetcode(); return false;">
+                <img src="../imagens/main/petcode.png" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoMomentos(); return false;">
+                <img src="../imagens/main/momentos.png" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoBytleas(); return false;">
+                <img src="../imagens/main/bytleas.png" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoAdministrativo(); return false;">
+                <img src="../imagens/main/adm.png" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoAlonga(); return false;">
+                <img src="../imagens/main/alongapet_preto.png" alt="">
+            </a>
+        </div>
+    </div>
         </section>
         <section class="segunda-pagina" id="saiba-mais">
+            <h1 class="titulo_s2" id="titulo2">PET de Ciências Computacionais</h1>
             <div class="info-projeto">
                 <div class="pt1">
-                    <h1 id="titulo2">PET de Ciências Computacionais</h1>
-                    <p id="paragrafo1">Criado em 1979 pela CAPES com o nome Programa Especial de Treinamento – PET, este programa foi transferido no final de 1999 para a Secretaria de Educação Superior do Ministério da Educação. Em 2004 o PET passou a ser identificado como Programa de Educação Tutorial.</p>
+                    <p id="paragrafo1">O PET (Programa de Educação Tutorial), criado em 1979 pela CAPES e consolidado pelo Ministério da Educação, é uma iniciativa que visa integrar ensino, pesquisa e extensão em grupos organizados por cursos nas Instituições de Ensino Superior do país.</p>
                    
-                    <p id="paragrafo2">O PET é desenvolvido por grupos de estudantes, com tutoria de um docente, organizados a partir de cursos de graduação das Instituições de Ensino Superior do país, sendo um grupo por curso, orientados pelo princípio da indissociabilidade entre ensino, pesquisa e extensão e da educação tutorial.</p>
+                    <p id="paragrafo2">Orientados pela educação tutorial e pelo princípio da indissociabilidade entre ensino e prática, os grupos PET, formados por estudantes e tutores docentes, promovem uma formação completa, expandindo o conhecimento e contribuindo para uma compreensão integral do mundo e da própria carreira.</p>
                 </div>
                 <div class="pt2">
-                    <p id="paragrafo3">O PET, ao desenvolver ações de ensino, pesquisa e extensão, de maneira articulada, permite uma formação global, tanto do aluno bolsista quanto dos demais alunos do curso, proporcionando-lhes uma compreensão mais integral do que ocorre consigo mesmo e no mundo. Ao mesmo tempo a multiplicidade de experiências contribui para reduzir os riscos de uma especialização precoce.</p>
+                    <p id="paragrafo3">No PET Ciências Computacionais, esse espírito se traduz em projetos que impactam a vida acadêmica e profissional dos membros e de toda a comunidade universitária. Quer saber mais? Acompanhe nossas ações e projetos ou siga-nos no Instagram @petc3furg.</p>
                    
-                    <p id="paragrafo4">Conheça mais sobre o PET C3 nas páginas de projeto ou no nosso Instagram @petc3furg</p>
+                    <p id="paragrafo4">Explore também nosso site e conheça nossos projetos e membros.</p>
                 </div>
             </div>
         </section>
-    </main> 
+    </main>
+    <footer>
+        <p>&copy; 2025 PET de Ciências Computacionais. Todos os direitos reservados.</p>
+        <a href="https://www.instagram.com/petc3furg?igsh=MW1raGhscHFqeWVsMA=="><i class="fa-brands fa-instagram ig-cor"></i></a>
+        <a href="https://www.furg.br/">
+            <img src="../imagens/main/furg.png" alt="FURG" class="footer-image">
+        </a>
+        <a href="https://c3novo.furg.br/">
+            <img src="../imagens/main/c3.png" alt="C4" class="footer-image">
+    </footer>
 </body>
 </html>

@@ -255,7 +255,43 @@ main h1 {
     transition: color 0.3s ease;
     animation: vibrar 0.3s ease-in-out;
 }
+/*********  Começo do footer  *********/
+footer {
+    width: 100%;
+    background-color: #444444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--cor-fundo);
+    padding: 10px 30px;
+    font-size: .8em;
+}
+footer .footer-icons {
+    display: flex;
+    gap: 20px;  /* Espaçamento entre os ícones e imagens */
+    justify-content: flex-end;  /* Alinha à direita */
+}
+footer p {
+    width: 80%;
+}
 
+.ig-cor {
+    color: var(--cor-fundo);
+    font-size: 40px;
+}
+
+.ig-cor:hover {
+    color: var(--cor-hover2);
+}
+/*********  Fim do footer  *********/
+.ig-cor {
+    color: var(--cor-fundo);
+    font-size: 40px;
+}
+
+.ig-cor:hover {
+    color: var(--cor-hover2);
+}
 
 @media screen and (max-width: 811px) {
     .icon, .iconx {
@@ -332,4 +368,13 @@ main h1 {
         opacity: 1;
         transform: scale(1.1); /* aumenta o tamanho do fundo também */
     }
+    .image-container.active .overlay {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+    
+    .image-container.active img {
+        transform: scale(1.15);
+    }
+    
 }

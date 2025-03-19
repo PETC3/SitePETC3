@@ -1,14 +1,14 @@
 (function() {
     // Definindo as variáveis
     let titulo = "Revista";
-    let descricao = "A Revista é um projeto que faz parte do PET de Ciências computacionais. O objetivo é ler gibi da Turma da Mônica";
+    let descricao = "A ICCEEg é uma revista digital que dá voz à pesquisa acadêmica nas áreas de ciências exatas e engenharia. Aberta para submissões e com revisão anônima, a revista incentiva a troca de conhecimento e o crescimento científico. Explore mais sobre como participar!";
     let imagemURL = "../imagens/main/revista.png";
     let classe = "revista";
 
-    let paragrafo1 = "paragrafo de teste para o livro";
-    let paragrafo2 = "estou apenas testando para o livro";
-    let paragrafo3 = "testo novamente para o livro";
-    let paragrafo4 = "não paro de testar para o livro";
+    let paragrafo1 = "A ICCEEg (Revista de Iniciação Científica em Ciências Exatas e Engenharia) é um periódico semestral digital, dedicado a divulgar pesquisas de acadêmicos ligados às ciências exatas e à engenharia.";
+    let paragrafo2 = "De acesso livre, a revista busca estimular a disseminação de conhecimento nessas áreas por meio da publicação de artigos acessíveis a todos.";
+    let paragrafo3 = "Suas edições têm submissão aberta ao público, e a revisão dos artigos ocorre de forma anônima por voluntários comprometidos, garantindo uma avaliação imparcial e enriquecedora.";
+    let paragrafo4 = "A ICCEEg é uma excelente oportunidade para alunos e pesquisadores contribuírem com a comunidade científica e impulsionarem suas carreiras acadêmicas.";
 
     // Função para atualizar o conteúdo com delay
     window.carregarConteudoRevista = function() {

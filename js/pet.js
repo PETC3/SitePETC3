@@ -1,14 +1,14 @@
 (function() {
     // Definindo as variáveis
     let titulo = "PET de Ciências Computacionais";
-    let descricao = "O PET Ciências Computacionais é um grupo que faz parte do Programa de Educação Tutorial. O grupo atualmente é formado por 18 graduandos, dos cursos de Engenharia de Automação, Engenharia de Computação e Sistema de Informação, da Universidade Federal do Rio Grande, e por um professor tutor.";
+    let descricao = "O PET Ciências Computacionais é um grupo de 18 estudantes de automação, computação e sistemas de informação que, com a orientação de um professor, explora ensino, pesquisa e extensão para criar experiências de aprendizado únicas.";
     let imagemURL = "../imagens/main/logo_pet_colorida.png";
     let classe = "";
 
-    let paragrafo1 = "Criado em 1979 pela CAPES com o nome Programa Especial de Treinamento – PET, este programa foi transferido no final de 1999 para a Secretaria de Educação Superior do Ministério da Educação. Em 2004 o PET passou a ser identificado como Programa de Educação Tutorial.";
-    let paragrafo2 = "O PET é desenvolvido por grupos de estudantes, com tutoria de um docente, organizados a partir de cursos de graduação das Instituições de Ensino Superior do país, sendo um grupo por curso, orientados pelo princípio da indissociabilidade entre ensino, pesquisa e extensão e da educação tutorial.";
-    let paragrafo3 = "O PET, ao desenvolver ações de ensino, pesquisa e extensão, de maneira articulada, permite uma formação global, tanto do aluno bolsista quanto dos demais alunos do curso, proporcionando-lhes uma compreensão mais integral do que ocorre consigo mesmo e no mundo. Ao mesmo tempo a multiplicidade de experiências contribui para reduzir os riscos de uma especialização precoce.";
-    let paragrafo4 = "Conheça mais sobre o PET C3 nas páginas de projeto ou no nosso Instagram @petc3furg";
+    let paragrafo1 = "O PET (Programa de Educação Tutorial), criado em 1979 pela CAPES e consolidado pelo Ministério da Educação, é uma iniciativa que visa integrar ensino, pesquisa e extensão em grupos organizados por cursos nas Instituições de Ensino Superior do país.";
+    let paragrafo2 = "Orientados pela educação tutorial e pelo princípio da indissociabilidade entre ensino e prática, os grupos PET, formados por estudantes e tutores docentes, promovem uma formação completa, expandindo o conhecimento e contribuindo para uma compreensão integral do mundo e da própria carreira.";
+    let paragrafo3 = "No PET Ciências Computacionais, esse espírito se traduz em projetos que impactam a vida acadêmica e profissional dos membros e de toda a comunidade universitária.";
+    let paragrafo4 = "Quer saber mais? Acompanhe nossas ações e projetos ou siga-nos no Instagram @petc3furg.";
 
     // Função para atualizar o conteúdo com delay
     window.carregarConteudoPet = function() {
