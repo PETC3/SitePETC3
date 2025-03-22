@@ -17,7 +17,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100dvh;
     margin: 0;
 }
 
@@ -201,7 +201,7 @@ header.cor .menu a::after {
 
 /*********  Começo do main  *********/
 main {
-    height: 100vh;
+    height: 100dvh;
     flex: 1;
 }
 
@@ -212,7 +212,7 @@ section {
 }
 
 .primeira-pagina {
-    height: 100vh;
+    height: 100dvh;
     padding-top: 140px;
 }
 
@@ -324,7 +324,7 @@ section {
     align-items: normal;
     color: var(--cor-fonte2);
     width: 100%;
-    min-height: 100vh;
+    min-height: 100dvh;
     padding: 100px 40px 0 40px;
     position: relative;
     z-index: 1;
