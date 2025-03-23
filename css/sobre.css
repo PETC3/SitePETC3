@@ -14,6 +14,12 @@ body {
     overflow-x: hidden; /* Evita scroll lateral */
     display: flex;
     flex-direction: column;
+
+
+    background-image: url(../imagens/sobre/construcao.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .circle {
@@ -318,5 +324,52 @@ footer p {
         border-right: 15px solid #fff;
         border-left: 0;
         left: 15px;  
+    }
+}
+
+@media screen and (max-width: 811px) {
+    .icon, .iconx {
+        font-size: 21px;
+        cursor: pointer;
+        border: none;
+        color: var(--cor-fundo);
+        background-color: var(--cor-projeto);
+    }
+    .icon:hover, .iconx:hover {
+        color: var(--cor-hover2);
+    }
+    .iconx {
+        position: absolute;
+        background-color: var(--cor-menu-mobile2);
+        right: 40px;
+        top: 28px;
+    }
+    .iconxi {
+        background-color: var(--cor-menu-mobile2);
+    }
+    header button {
+        display: block;
+    }
+    .menu ul {
+        position: absolute;
+        top: 0;
+        right: 0;
+        justify-content: end;
+        display: block;
+        margin-right: -200vh;
+        padding: 110px 30px;
+        height: 100vh;
+        background-color: var(--cor-menu-mobile2);
+        border: 1px solid rgba(0, 0, 0, 0.352);
+        animation-duration: .2s;
+    }
+    .menu li {
+        padding: 10px 0;
+        background-color: var(--cor-menu-mobile2);
+    }
+    .menu a {
+        background-color: var(--cor-menu-mobile2);
+        display: flex;
+        justify-content: center;
     }
 }
