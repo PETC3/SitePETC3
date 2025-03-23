@@ -10,12 +10,13 @@
 
 html {
     scroll-behavior: smooth;
-    background-color: var(--cor-fundo);
+    background-color: var(--cor-fundo) !important;
     color: var(--cor-fonte);
+    filter: none !important;
+    forced-color-adjust: none !important;
 }
 
 body {
-    background-color: var(--cor-fundo);
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
