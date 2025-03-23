@@ -8,12 +8,14 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-html {
+html, body {
     scroll-behavior: smooth;
     background-color: var(--cor-fundo) !important;
     color: var(--cor-fonte);
     filter: none !important;
     forced-color-adjust: none !important;
+    -webkit-filter: none !important;
+    -webkit-text-fill-color: inherit !important;
 }
 
 body {
