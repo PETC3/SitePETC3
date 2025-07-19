@@ -164,9 +164,9 @@ main h1 {
     transition: transform 0.3s ease, z-index 0.3s ease;
     z-index: 1;
 }
-.efeito {
+/*.efeito {
     visibility: hidden;
-}
+}*/
 
 .grid-container img {
     width: 100%; /* pra imagem encher todo espaço */
