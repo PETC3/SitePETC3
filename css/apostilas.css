@@ -1,0 +1,291 @@
+@import url('variaveis.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--cor-projeto);
+    color: var(--cor-fundo);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o footer fique lá embaixo se tiver pouco conteúdo */
+}
+
+/* --- REUTILIZAÇÃO DO CÓDIGO DO CABEÇALHO E ANIMAÇÕES --- */
+.circle {
+    background-color: var(--cor-projeto);
+    animation: growCircleInicio .7s forwards;
+    border-top-left-radius: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+}
+
+@keyframes growCircleInicio {
+    0% { width: 200vw; height: 200vw; }
+    100% { width: 0vw; height: 0vw; }
+}
+
+.circle.grow {
+    animation: growCircleFinal .7s forwards;
+}
+
+@keyframes growCircleFinal {
+    0% { width: 0vw; height: 0vw; }
+    100% { width: 200vw; height: 200vw; }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--cor-projeto);
+    width: 100%;
+    position: fixed;
+    transition: .5s;
+    box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.1);
+    z-index: 11;
+}
+
+header.rolagem {
+    padding: 15px 40px;
+}
+
+.logo { height: 50px; }
+header button { display: none; }
+.menu { width: 100%; }
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: end;
+    margin-right: 0;
+    max-width: 100%;
+}
+.menu li { padding: 0 20px; }
+.menu a {
+    text-decoration: none;
+    color: var(--cor-fundo);
+    width: 100%;
+    position: relative;
+}
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    bottom: -5px;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+.menu a:hover::after { width: 100%; left: 0; }
+.menu a:hover { color: var(--cor-hover2); }
+
+/* Imagem de fundo */
+body::before {
+    content: "";    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Mantendo o mesmo caminho de imagem que você forneceu */
+    background: url('../imagens/membros/imagem_fundo.png') no-repeat center center;
+    background-size: cover;
+    opacity: 1;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* --- ESTILOS ESPECÍFICOS DA PÁGINA DE APOSTILAS --- */
+
+main {
+    padding-top: 120px; /* Mais espaço para o header */
+    padding-bottom: 50px;
+    flex: 1; /* Empurra o footer para baixo */
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.pdf-container {
+    display: grid;
+    /* Cria colunas automáticas com largura mínima de 280px */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 8%;
+    justify-items: center;
+}
+
+.pdf-card {
+    background-color: rgba(17, 60, 116, 0.85); /* Mesma cor base do overlay dos membros */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px 20px;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 280px;
+}
+
+.pdf-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    background-color: rgba(17, 60, 116, 0.95);
+}
+
+.icon-area {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: var(--cor-hover2, #4dbce9); /* Usa sua variável de hover ou um azul padrão */
+}
+
+.pdf-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.pdf-card p {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    line-height: 1.4;
+    color: #e0e0e0;
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: var(--cor-fundo);
+    color: var(--cor-projeto);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-download:hover {
+    background-color: transparent;
+    color: var(--cor-fundo);
+    border: 2px solid var(--cor-fundo);
+    cursor: pointer;
+}
+
+.btn-download i {
+    margin-left: 8px;
+}
+
+/* --- FOOTER --- */
+footer {
+    width: 100%;
+    background-color: #444444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--cor-fundo);
+    padding: 15px 30px;
+    font-size: .8em;
+    z-index: 10;
+}
+footer .footer-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+}
+footer p { width: 80%; }
+
+.ig-cor {
+    color: var(--cor-fundo);
+    font-size: 30px; /* Ajustei levemente para alinhar com as imagens */
+}
+.ig-cor:hover { color: var(--cor-hover2); }
+
+/* --- RESPONSIVIDADE (Mantendo a lógica original) --- */
+@media screen and (max-width: 811px) {
+    .icon, .iconx {
+        font-size: 21px;
+        cursor: pointer;
+        border: none;
+        color: var(--cor-fundo);
+        background-color: var(--cor-projeto);
+    }
+    .icon:hover, .iconx:hover { color: var(--cor-hover2); }
+    
+    .iconx {
+        position: absolute;
+        background-color: var(--cor-menu-mobile2);
+        right: 40px;
+        top: 28px;
+    }
+    .iconxi { background-color: var(--cor-menu-mobile2); }
+    
+    header button { display: block; }
+    
+    .menu ul {
+        position: absolute;
+        top: 0;
+        right: 0;
+        justify-content: end;
+        display: block;
+        margin-right: -200vh;
+        padding: 110px 30px;
+        height: 100vh;
+        background-color: var(--cor-menu-mobile2);
+        border: 1px solid rgba(0, 0, 0, 0.352);
+        animation-duration: .2s;
+    }
+    .menu li {
+        padding: 10px 0;
+        background-color: var(--cor-menu-mobile2);
+    }
+    .menu a {
+        background-color: var(--cor-menu-mobile2);
+        display: flex;
+        justify-content: center;
+    }
+    
+    @keyframes showSidebar {
+        from {margin-right: -200vh;}
+        to {margin-right: 0px;}
+    }
+
+    /* Ajustes específicos para a Grid de PDFs no Mobile */
+    .pdf-container {
+        padding: 0 5%;
+        gap: 20px;
+    }
+    
+    main h1 { font-size: 2rem; }
+    
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    footer p { width: 100%; }
+    footer .footer-icons { justify-content: center; }
+}
