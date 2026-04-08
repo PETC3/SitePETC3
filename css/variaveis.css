@@ -1,4 +1,4 @@
-:root{
+:root {
     --cor-fundo: #f2f2f2;
     --cor-fonte: #000000;
     --cor-menu-mobile: #e8e8e8;
@@ -9,15 +9,17 @@
     --cor-hover2: #397dd4;
     --imagem-fundo-secao2: url('../imagens/membros/imagem_fundo.png');
 }
-.administrativo:root {
+
+html.administrativo {
     --cor-projeto: #f1a7a6;
     --cor-hover: #0c89bb;
     --cor-fonte2: #fff;
-    --cor-menu-mobile2: #f1a7a6 ;
+    --cor-menu-mobile2: #f1a7a6;
     --cor-hover2: #0c89bb;
     --imagem-fundo-secao2: url('../imagens/main/fundo_administrativo.png');
 }
-.almoxarifado:root {
+
+html.almoxarifado {
     --cor-projeto: #ffd400;
     --cor-hover: #dfba00;
     --cor-fonte2: #000;
@@ -25,7 +27,8 @@
     --cor-hover2: #fff;
     --imagem-fundo-secao2: url('../imagens/main/fundo_almoxarifado.png');
 }
-.alongapet:root {
+
+html.alongapet {
     --cor-projeto: #ef9b0f;
     --cor-hover: #ef9b0f;
     --cor-fonte2: #000;
@@ -33,7 +36,8 @@
     --cor-hover2: #e9ff58;
     --imagem-fundo-secao2: url('../imagens/main/fundo_alongapet.png');
 }
-.bytleas:root {
+
+html.bytleas {
     --cor-projeto: #8b949d;
     --cor-hover: #494948;
     --cor-fonte2: #f2f2f2;
@@ -41,7 +45,8 @@
     --cor-hover2: #f2f2f2;
     --imagem-fundo-secao2: url('../imagens/main/fundo_bytleas.png');
 }
-.lego:root {
+
+html.lego {
     --cor-projeto: #187540;
     --cor-hover: #187540;
     --cor-fonte2: #fff;
@@ -49,7 +54,8 @@
     --cor-hover2: #35fd8c;
     --imagem-fundo-secao2: url('../imagens/main/fundo_lego.png');
 }
-.momentos:root {
+
+html.momentos {
     --cor-projeto: #9b65a0;
     --cor-hover: #650470;
     --cor-fonte2: #000;
@@ -58,7 +64,7 @@
     --imagem-fundo-secao2: url('../imagens/main/fundo_momentos.png');
 }
 
-.petcode:root {
+html.petcode {
     --cor-projeto: #671A99;
     --cor-hover: #671A99;
     --cor-fonte2: #fff;
@@ -66,7 +72,8 @@
     --cor-hover2: #1E90FF;
     --imagem-fundo-secao2: url('../imagens/main/fundo_petcode.png');
 }
-.revista:root {
+
+html.revista {
     --cor-projeto: #4f83b4;
     --cor-hover: #4f83b4;
     --cor-fonte2: #fff;

@@ -1,181 +1,200 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="" id="classeprojeto">
+<html lang="pt-br" class="pet" id="classeprojeto">
 <head>
-    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PET C3</title>
+
+    <!-- CSS Externo -->
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- CSS Próprio -->
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="image/png" href="imagens/main/arvore_pet_sem_fundo.png">
+
+    <!-- JS Externo -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- JS Próprio -->
     <script src="js/main.js" defer></script>
-    <script src="js/logoheader.js" defer></script>
-    <script src="js/pet.js" defer></script>
-    <script src="js/almoxarifado.js" defer></script>
-    <script src="js/alongapet.js" defer></script>
-    <script src="js/petcode.js" defer></script>
-    <script src="js/lego.js" defer></script>
-    <script src="js/revista.js" defer></script>
-    <script src="js/momentos.js" defer></script>
-    <script src="js/bytleas.js" defer></script>
-    <script src="js/administrativo.js" defer></script>
+    <script src="js/projetos.js" defer></script>
 </head> 
 <body>
     <div class="circle"></div>
+
     <header id="header">
-        <a href="index.html" class="animateLink" onclick="adicionarAnimacao(); return false;"><img src="imagens/main/logo_pet_preta.png" alt="Logo PET C3" class="logo-header" id="logo"></a>
-        <nav class="menu">
+        <a href="index.html" class="animateLink" aria-label="Ir para a página inicial">
+            <img src="imagens/main/logo_pet_preta.png" alt="Logo PET C3" class="logo-header" id="logo">
+        </a>
+
+        <nav class="menu" aria-label="Menu principal">
             <ul id="nav_header">
-                <button class="iconx" onclick="toggleSidebar()"><i class="fa-solid fa-xmark iconxi"></i></button>
-                <li><a href="index.html" class="nav_link animateLink" onclick="adicionarAnimacao(); return false;">Home</a></li>
-                <li><a href="paginas/membros.html" class="nav_link animateLinkLongo" onclick="adicionarAnimacaoLonga(); return false;">Membros</a></li>
-                <li><a href="paginas/sobre.html" class="nav_link animateLink" onclick="adicionarAnimacao(); return false;">Sobre</a></li>
+                <li style="padding: 0; background-color: transparent;">
+                    <button class="iconx" onclick="toggleSidebar()" aria-label="Fechar menu">
+                        <i class="fa-solid fa-xmark iconxi" aria-hidden="true"></i>
+                    </button>
+                </li>
+                <li><a href="index.html" class="nav_link animateLink">Home</a></li>
+                <li><a href="paginas/membros.html" class="nav_link animateLinkLongo">Membros</a></li>
+                <li><a href="paginas/apostilas.html" class="nav_link animateLink">Apostilas</a></li>
+                <li><a href="https://2m5t029qgolo.shares.zrok.io/login?next=%2F" class="nav_link animateLink">Ata</a></li>
             </ul>
         </nav>
-        <button class="icon" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
+        
+        <button class="icon" onclick="toggleSidebar()" aria-label="Abrir menu">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
     </header>
+
     <main>
+        <!-- ================= PRIMEIRA PÁGINA ================= -->
         <section class="primeira-pagina">
             <div class="texto">
                 <h1>O <span id="titulo">PET de Ciências Computacionais</span></h1>
                 <p id="descricao">O PET Ciências Computacionais é um grupo de 18 estudantes de automação, computação e sistemas de informação que, com a orientação de um professor, explora ensino, pesquisa e extensão para criar experiências de aprendizado únicas.</p>
                 <a href="#saiba-mais" class="sm">Saiba Mais</a>
-                <div class="slider projetos-pc" reverse="true" style="
-                    --width: 200px;
-                    --height: 200px;
-                    --quantity: 9;
-                ">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoAlmoxarifado(); return false;">
-                        <img src="imagens/main/almoxarifado.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoLego(); return false;">
-                        <img src="imagens/main/lego.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoRevista(); return false;">
-                        <img src="imagens/main/revista.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoAlonga(); return false;">
-                        <img src="imagens/main/alongapet_preto.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoPet(); return false;">
-                        <img src="imagens/main/logo_pet_preta.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoPetcode(); return false;">
-                        <img src="imagens/main/petcode.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoMomentos(); return false;">
-                        <img src="imagens/main/momentos.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoBytleas(); return false;">
-                        <img src="imagens/main/bytleas.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoAdministrativo()  ; return false;">
-                        <img src="imagens/main/adm.png" alt="">
-                    </a>
+
+                <!-- Slider Desktop -->
+                <div class="slider projetos-pc">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="nav_link" onclick="carregarProjeto('almoxarifado'); return false;">
+                                    <img src="imagens/main/almoxarifado.png" alt="Projeto Almoxarifado" loading="lazy">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="nav_link" onclick="carregarProjeto('lego'); return false;">
+                                    <img src="imagens/main/lego.png" alt="Projeto Lego" loading="lazy">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="nav_link" onclick="carregarProjeto('revista'); return false;">
+                                    <img src="imagens/main/revista.png" alt="Projeto Revista" loading="lazy">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="nav_link" onclick="carregarProjeto('alongapet'); return false;">
+                                    <img src="imagens/main/alongapet_preto.png" alt="Projeto AlongaPET" loading="lazy">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="nav_link" onclick="carregarProjeto('pet'); return false;">
+                                    <img src="imagens/main/logo_pet_preta.png" alt="Página Principal PET" loading="lazy">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="nav_link" onclick="carregarProjeto('petcode'); return false;">
+                                    <img src="imagens/main/petcode.png" alt="Projeto PETCode" loading="lazy">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="nav_link" onclick="carregarProjeto('momentos'); return false;">
+                                    <img src="imagens/main/momentos.png" alt="Projeto Momentos PET" loading="lazy">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="nav_link" onclick="carregarProjeto('bytleas'); return false;">
+                                    <img src="imagens/main/bytleas.png" alt="Projeto The Bytleas" loading="lazy">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="nav_link" onclick="carregarProjeto('administrativo'); return false;">
+                                    <img src="imagens/main/adm.png" alt="Setor Administrativo" loading="lazy">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-                </div>
-            </div>
+
             <div class="quarter-circle">
-                <img src="imagens/main/logo_pet_colorida.png" alt="" class="logo" id="logobola">
+                <img src="imagens/main/logo_pet_colorida.png" alt="Logo colorida do PET" class="logo" id="logobola">
             </div>
-            <div class="swiper-container projetos-mobile" reverse="true" style="
-    --width: 200px;
-    --height: 200px;
-    --quantity: 9;
-">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoLego(); return false;">
-                <img src="imagens/main/lego.png" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoAlmoxarifado(); return false;">
-                <img src="imagens/main/almoxarifado.png" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoRevista(); return false;">
-                <img src="imagens/main/revista.png" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoPet(); return false;">
-                <img src="imagens/main/logo_pet_preta.png" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoPetcode(); return false;">
-                <img src="imagens/main/petcode.png" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoMomentos(); return false;">
-                <img src="imagens/main/momentos.png" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoBytleas(); return false;">
-                <img src="imagens/main/bytleas.png" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoAdministrativo(); return false;">
-                <img src="imagens/main/adm.png" alt="">
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="#" class="nav_link animateLink" onclick="adicionarAnimacao();carregarConteudoAlonga(); return false;">
-                <img src="imagens/main/alongapet_preto.png" alt="">
-            </a>
-        </div>
-    </div>
+
+            <!-- Slider Mobile -->
+            <div class="swiper-container projetos-mobile">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="nav_link" onclick="carregarProjeto('lego'); return false;">
+                            <img src="imagens/main/lego.png" alt="Projeto Lego" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="nav_link" onclick="carregarProjeto('almoxarifado'); return false;">
+                            <img src="imagens/main/almoxarifado.png" alt="Projeto Almoxarifado" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="nav_link" onclick="carregarProjeto('revista'); return false;">
+                            <img src="imagens/main/revista.png" alt="Projeto Revista" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="nav_link" onclick="carregarProjeto('pet'); return false;">
+                            <img src="imagens/main/logo_pet_preta.png" alt="Página Principal PET" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="nav_link" onclick="carregarProjeto('petcode'); return false;">
+                            <img src="imagens/main/petcode.png" alt="Projeto PETCode" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="nav_link" onclick="carregarProjeto('momentos'); return false;">
+                            <img src="imagens/main/momentos.png" alt="Projeto Momentos PET" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="nav_link" onclick="carregarProjeto('bytleas'); return false;">
+                            <img src="imagens/main/bytleas.png" alt="Projeto The Bytleas" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="nav_link" onclick="carregarProjeto('administrativo'); return false;">
+                            <img src="imagens/main/adm.png" alt="Setor Administrativo" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="nav_link" onclick="carregarProjeto('alongapet'); return false;">
+                            <img src="imagens/main/alongapet_preto.png" alt="Projeto AlongaPET" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <!-- ================= SEGUNDA PÁGINA ================= -->
         <section class="segunda-pagina" id="saiba-mais">
             <h1 class="titulo_s2" id="titulo2">PET de Ciências Computacionais</h1>
             <div class="info-projeto">
                 <div class="pt1">
                     <p id="paragrafo1">O PET (Programa de Educação Tutorial), criado em 1979 pela CAPES e consolidado pelo Ministério da Educação, é uma iniciativa que visa integrar ensino, pesquisa e extensão em grupos organizados por cursos nas Instituições de Ensino Superior do país.</p>
-                   
                     <p id="paragrafo2">Orientados pela educação tutorial e pelo princípio da indissociabilidade entre ensino e prática, os grupos PET, formados por estudantes e tutores docentes, promovem uma formação completa, expandindo o conhecimento e contribuindo para uma compreensão integral do mundo e da própria carreira.</p>
                 </div>
                 <div class="pt2">
                     <p id="paragrafo3">No PET Ciências Computacionais, esse espírito se traduz em projetos que impactam a vida acadêmica e profissional dos membros e de toda a comunidade universitária. Quer saber mais? Acompanhe nossas ações e projetos ou siga-nos no Instagram @petc3furg.</p>
-                   
                     <p id="paragrafo4">Explore também nosso site e conheça nossos projetos e membros.</p>
                 </div>
             </div>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2026 PET de Ciências Computacionais. Todos os direitos reservados.</p>
-        <a href="https://www.instagram.com/petc3furg?igsh=MW1raGhscHFqeWVsMA=="><i class="fa-brands fa-instagram ig-cor"></i></a>
-        <a href="https://www.furg.br/">
-            <img src="imagens/main/furg.png" alt="FURG" class="footer-image">
-        </a>
-        <a href="https://c3novo.furg.br/">
-            <img src="imagens/main/c3.png" alt="C4" class="footer-image">
+        <div class="footer-icons">
+            <a href="https://www.instagram.com/petc3furg?igsh=MW1raGhscHFqeWVsMA==" aria-label="Instagram do PET C3">
+                <i class="fa-brands fa-instagram ig-cor" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.furg.br/" aria-label="Site da FURG">
+                <img src="imagens/main/furg.png" alt="FURG" class="footer-image" loading="lazy">
+            </a>
+            <a href="https://c3.furg.br/" aria-label="Site do C3">
+                <img src="imagens/main/c3.png" alt="C3" class="footer-image" loading="lazy">
+            </a>
+        </div>
     </footer>
 </body>
 </html>

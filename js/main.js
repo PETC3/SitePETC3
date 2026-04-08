@@ -1,107 +1,104 @@
-var navHeader = document.getElementById('nav_header');
-var showSidebar = false;
+/* =========================================
+   MENU MOBILE E SIDEBAR OTIMIZADO
+========================================= */
+
+const navHeader = document.getElementById('nav_header');
 
 function toggleSidebar() {
-  showSidebar = !showSidebar;
-  if(showSidebar) {
-    navHeader.style.marginRight = '0px';
-    navHeader.style.animationName = 'showSidebar';
-  }
-  else {
-    navHeader.style.marginRight = '-200vh';
-    navHeader.style.animationName = '';
-  }
+    navHeader.classList.toggle('ativo');
 }
 
-window.addEventListener("scroll", function(){
-  let header = document.querySelector('#header')
+/* =========================================
+   EVENTOS DE ROLAGEM E CABEÇALHO
+========================================= */
 
-  header.classList.toggle('rolagem', window.scrollY > 0)
-  
-  let triggerHeight = window.innerHeight * 0.9;
+window.addEventListener("scroll", function() {
+    const header = document.querySelector('#header');
+    const logoIndex = document.querySelector('#logo'); 
 
-  // Adiciona a classe 'nova-cor' quando o scroll passa de 100vh
-  if (window.scrollY > triggerHeight) {
-    header.classList.add('cor');
-  } else {
-    header.classList.remove('cor');
-  }
-})
+    header.classList.toggle('rolagem', window.scrollY > 0);
 
-// Seleciona todos os links com a classe 'animateLink'
+    const triggerHeight = window.innerHeight * 0.9;
+
+    if (window.scrollY > triggerHeight) {
+        header.classList.add('cor');
+        if (logoIndex) logoIndex.src = 'imagens/main/logo_pet_branca.png';
+    } else {
+        header.classList.remove('cor');
+        if (logoIndex) logoIndex.src = 'imagens/main/logo_pet_preta.png';
+    }
+});
+
+/* =========================================
+   ANIMAÇÕES DE NAVEGAÇÃO SINCRONIZADAS
+========================================= */
+
 const animateLinks = document.querySelectorAll('.animateLink');
+const animateLinksLongo = document.querySelectorAll('.animateLinkLongo');
 
 animateLinks.forEach(link => {
     link.addEventListener('click', function(event) {
-        event.preventDefault(); // Evita o comportamento padrão do link
-        document.querySelector('.circle').classList.add('grow'); // Adiciona a classe para iniciar a animação
+        if (link.getAttribute('href') === '#') return;
+
+        event.preventDefault(); 
+        document.querySelector('.circle').classList.add('grow');
         
-        // Espera o tempo da animação antes de redirecionar
+        // Ajustado para 350ms (metade de 0.7s, momento exato em que a tela fica coberta)
         setTimeout(function() {
             window.location.href = link.href;
-        }, 100); // 700ms corresponde à duração da animação
+        }, 350); 
+    });
+});
+
+animateLinksLongo.forEach(link => {
+    link.addEventListener('click', function(event) {
+        if (link.getAttribute('href') === '#') return;
+
+        event.preventDefault();
+        document.querySelector('.circle').classList.add('growLongo');
+        
+        // Ajustado para 400ms (duração exata da animação growLongo)
+        setTimeout(function() {
+            window.location.href = link.href;
+        }, 400); 
     });
 });
 
 function adicionarAnimacao() {
-  const circle = document.querySelector('.circle');
-  circle.classList.remove('grow'); // Remove a classe para permitir a reativação
-  void circle.offsetWidth; // Força o reflow para reiniciar a animação
-  circle.classList.add('grow'); // Adiciona a classe para iniciar a animação
+    const circle = document.querySelector('.circle');
+    if(circle) {
+        circle.classList.remove('grow');
+        void circle.offsetWidth;
+        circle.classList.add('grow');
+    }
 }
 
-// Seleciona todos os links com a classe 'animateLinkLongo'
-const animateLinksLongo = document.querySelectorAll('.animateLinkLongo');
-
-animateLinksLongo.forEach(link => {
-    link.addEventListener('click', function(event) {
-        event.preventDefault(); // Evita o comportamento padrão do link
-        document.querySelector('.circle').classList.add('growLongo'); // Adiciona a classe para iniciar a animação
-        
-        // Espera o tempo da animação antes de redirecionar
-        setTimeout(function() {
-            window.location.href = link.href;
-        }, 100); // 700ms corresponde à duração da animação
-    });
-});
-
-function adicionarAnimacaoLonga() {
-  const circle = document.querySelector('.circle');
-  circle.classList.remove('growLongo'); // Remove a classe para permitir a reativação
-  void circle.offsetWidth; // Força o reflow para reiniciar a animação
-  circle.classList.add('growLongo'); // Adiciona a classe para iniciar a animação
-}
+/* =========================================
+   SLIDER DE PROJETOS (SWIPER)
+========================================= */
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Inicializando o Swiper para a versão responsiva
-  const swiper = new Swiper('.swiper-container', {
-      slidesPerView: 'auto',        // Ajusta o número de slides com base no espaço disponível
-      spaceBetween: 15,             // Distância entre os slides
-      loop: true,                   // Habilita o loop
-      autoplay: {
-          delay: 1000,              // Transição automática
-      },
-      navigation: {
-          nextEl: '.swiper-button-next',  // Botão para o próximo slide
-          prevEl: '.swiper-button-prev',  // Botão para o slide anterior
-      },
-      pagination: {
-          el: '.swiper-pagination',        // Elemento da paginação
-          clickable: true,                 // Permite clicar nos pontos da paginação
-      },
-      breakpoints: {
-          768: {
-              slidesPerView: 2,   // Exibe 2 slides por vez em dispositivos menores
-              spaceBetween: 20,   // Distância entre os slides
-          },
-          1024: {
-              slidesPerView: 3,   // Exibe 3 slides por vez em dispositivos maiores
-              spaceBetween: 30,   // Distância entre os slides
-          },
-          1200: {
-              slidesPerView: 4,   // Exibe 4 slides por vez em telas grandes
-              spaceBetween: 40,   // Distância maior entre os slides
-          }
-      }
-  });
+    if (document.querySelector('.swiper-container')) {
+        const swiper = new Swiper('.swiper-container', {
+            slidesPerView: 'auto',        
+            spaceBetween: 15,             
+            loop: true,                   
+            autoplay: {
+                delay: 1000,              
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',  
+                prevEl: '.swiper-button-prev',  
+            },
+            pagination: {
+                el: '.swiper-pagination',        
+                clickable: true,                 
+            },
+            breakpoints: {
+                768: { slidesPerView: 2, spaceBetween: 20 },
+                1024: { slidesPerView: 3, spaceBetween: 30 },
+                1200: { slidesPerView: 4, spaceBetween: 40 }
+            }
+        });
+    }
 });
