@@ -1,9 +1,9 @@
-window.efeitos = ScrollReveal({reset:true})
+window.efeitos = ScrollReveal({ reset: false });
 
-efeitos.reveal('.efeito',{
+efeitos.reveal('.efeito', {
     duration: 2000,
     distance: '90px',
-})
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     const containers = document.querySelectorAll('.image-container');
