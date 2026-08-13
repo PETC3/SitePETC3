@@ -147,5 +147,5 @@ function carregarProjeto(idProjeto) {
         document.getElementById('paragrafo2').textContent = dados.paragrafo2;
         document.getElementById('paragrafo3').textContent = dados.paragrafo3;
         document.getElementById('paragrafo4').textContent = dados.paragrafo4;
-    }, 100); 
+    }, 330); 
 }

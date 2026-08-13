@@ -84,7 +84,8 @@ document.addEventListener('DOMContentLoaded', function () {
             spaceBetween: 15,             
             loop: true,                   
             autoplay: {
-                delay: 1000,              
+                delay: 2800,
+                disableOnInteraction: false,
             },
             navigation: {
                 nextEl: '.swiper-button-next',  

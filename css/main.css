@@ -8,7 +8,7 @@ body {
 }
 
 header, .menu ul, .menu li, .menu a {
-    transition: background-color 0.5s ease, color 0.5s ease, padding 0.5s ease;
+    transition: background-color 0.35s ease, color 0.25s ease, padding 0.35s ease, transform 0.25s ease;
 }
 
 header {
@@ -125,7 +125,8 @@ main {
 
 .texto .sm:hover {
     background-color: var(--cor-hover);
-    transition: .5s;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+    transform: translateY(-1px);
 }
 
 .projetos-pc {
