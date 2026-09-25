@@ -15,8 +15,12 @@ function toggleSidebar() {
 window.addEventListener("scroll", function() {
     const header = document.querySelector('#header');
     const logoIndex = document.querySelector('#logo'); 
+    const backToTopButton = document.querySelector('.back-to-top');
 
     header.classList.toggle('rolagem', window.scrollY > 0);
+    if (backToTopButton) {
+        backToTopButton.classList.toggle('visivel', window.scrollY > 500);
+    }
 
     const triggerHeight = window.innerHeight * 0.9;
 
@@ -72,6 +76,27 @@ function adicionarAnimacao() {
         circle.classList.add('grow');
     }
 }
+
+/* =========================================
+   BOTAO VOLTAR AO TOPO
+========================================= */
+
+document.addEventListener('DOMContentLoaded', function () {
+    const backToTopButton = document.createElement('button');
+    backToTopButton.type = 'button';
+    backToTopButton.className = 'back-to-top';
+    backToTopButton.textContent = 'Voltar ao topo';
+    backToTopButton.setAttribute('aria-label', 'Voltar ao topo da página');
+
+    backToTopButton.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    document.body.appendChild(backToTopButton);
+});
 
 /* =========================================
    SLIDER DE PROJETOS (SWIPER)
