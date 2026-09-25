@@ -82,18 +82,18 @@ function adicionarAnimacao() {
 ========================================= */
 
 document.addEventListener('DOMContentLoaded', function () {
-    const backToTopButton = document.createElement('button');
-    backToTopButton.type = 'button';
+    if (!document.getElementById('topo')) {
+        const pageTop = document.createElement('span');
+        pageTop.id = 'topo';
+        pageTop.setAttribute('aria-hidden', 'true');
+        document.body.prepend(pageTop);
+    }
+
+    const backToTopButton = document.createElement('a');
+    backToTopButton.href = '#topo';
     backToTopButton.className = 'back-to-top';
     backToTopButton.textContent = 'Voltar ao topo';
     backToTopButton.setAttribute('aria-label', 'Voltar ao topo da página');
-
-    backToTopButton.addEventListener('click', function () {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
 
     document.body.appendChild(backToTopButton);
 });

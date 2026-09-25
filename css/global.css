@@ -28,6 +28,12 @@ main {
     flex: 1;
 }
 
+#topo {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .back-to-top {
     position: fixed;
     right: 24px;
@@ -38,6 +44,10 @@ main {
     padding: 12px 18px;
     background-color: var(--cor-menu-mobile2);
     color: var(--cor-fundo);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 700;
     font-size: 0.95rem;
     cursor: pointer;
