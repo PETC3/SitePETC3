@@ -96,6 +96,46 @@ document.addEventListener('DOMContentLoaded', function () {
     backToTopButton.setAttribute('aria-label', 'Voltar ao topo da página');
 
     document.body.appendChild(backToTopButton);
+
+    const scrollDuration = 700;
+
+    function scrollToTarget(target) {
+        const startPosition = window.scrollY;
+        const targetPosition = target.getBoundingClientRect().top + startPosition;
+        const distance = targetPosition - startPosition;
+        const startTime = performance.now();
+        const previousScrollBehavior = document.documentElement.style.scrollBehavior;
+
+        document.documentElement.style.scrollBehavior = 'auto';
+
+        function animateScroll(currentTime) {
+            const elapsed = Math.min((currentTime - startTime) / scrollDuration, 1);
+            const progress = elapsed < 0.5
+                ? 4 * elapsed * elapsed * elapsed
+                : 1 - Math.pow(-2 * elapsed + 2, 3) / 2;
+
+            window.scrollTo(0, startPosition + distance * progress);
+
+            if (elapsed < 1) {
+                requestAnimationFrame(animateScroll);
+            } else {
+                document.documentElement.style.scrollBehavior = previousScrollBehavior;
+            }
+        }
+
+        requestAnimationFrame(animateScroll);
+    }
+
+    document.querySelectorAll('.sm, .back-to-top').forEach(link => {
+        link.addEventListener('click', function (event) {
+            const target = document.querySelector(link.getAttribute('href'));
+
+            if (!target) return;
+
+            event.preventDefault();
+            scrollToTarget(target);
+        });
+    });
 });
 
 /* =========================================
